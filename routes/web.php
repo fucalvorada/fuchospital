@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('adicionar', function () {
-    return view('alunos.create');
-});
 
 Route::group(['middleware'=> ['web'] ], function(){
 	Route::resource('alunos', 'AlunoController');
