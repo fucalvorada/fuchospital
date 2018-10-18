@@ -25,11 +25,11 @@
                             <label for="email" class="col-sm-4 col-form-label">Usuário</label>
 
                             <div class="col-md-6">
-                                <input id="use" type="text" class="form-control{{ $errors->has('use') ? ' is-invalid' : '' }}" name="use" value="{{ old('use') }}" required autofocus>
+                                <input id="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
-                                @if ($errors->has('use'))
+                                @if ($errors->has('email'))
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $errors->first('use') }}</strong>
+                                    <strong>{{ $errors->first('email') }}</strong>
                                 </span>
                                 @endif
                             </div>
