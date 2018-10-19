@@ -1,7 +1,7 @@
-@extends('layouts.head');
+@extends('includes.head');
 
 
-@extends('layouts.footer');
+@extends('includes.footer');
 
 
 
