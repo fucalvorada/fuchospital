@@ -1,0 +1,89 @@
+body.login.login-action-login {
+    background: #2a2f43;
+}
+body.login #login h1 a{
+	background: url('../images/logo_login_form.png');
+    height: 68px;
+    width: 100%;
+    margin: 0 auto 20px;
+}
+body.login form {
+    border-radius: 3px;
+    padding: 27px 24px 77px;
+	position: relative;
+}
+
+body.login label {
+    color: #9b9ead;
+    font-size: 13px;
+}
+
+body.login form .input, 
+body.login form input[type=checkbox], 
+body.login input[type=text] {
+    background: #eff4f7;
+    border: none;
+    box-shadow: none;
+    border-radius: 3px;
+    margin-bottom: 18px;
+}
+
+body.login form .forgetmenot label {
+    font-size: 13px;
+    line-height: 33px;
+}
+
+body.login form input#rememberme {
+    background: #fff;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    border: 2px solid #e4e6eb;
+    border-radius: 8px;
+    vertical-align: sub;
+    margin-bottom: 0;
+    margin-right: 0
+}
+
+body.login form #wp-submit {
+    background: #67d3e0;
+    border: none;
+    box-shadow: 0 3px 0 #60c4d0;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    line-height: 38px !important;
+    height: 35px !important;
+    padding: 0 21px !important;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+}
+
+body.login form #wp-submit:hover {
+	box-shadow: 0 3px #6E9E08 !important;
+    color: #fff !important;
+    background-color: #8cc80c !important;
+}
+
+.login #backtoblog a, .login #nav a {
+    text-decoration: none;
+    color: #9b9ead;
+    font-size: 13px;
+}
+
+body.login form:after {
+    content: "You can login with: User / Pass";
+    position: absolute;
+    bottom: 30px;
+    left: 27px;
+    right: 27px;
+    color: #E17676;
+}
+
+#wp-auth-check-wrap #wp-auth-check{
+    background-color: #2A2F43;
+}
