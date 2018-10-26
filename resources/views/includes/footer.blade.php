@@ -1,4 +1,4 @@
-
+<!-- 
 
 <script type="text/javascript" src="{{ asset('wp-includes/js/jquery/ui/core.min.js') }}"></script>
 
@@ -50,4 +50,4 @@
 
 <script type="text/javascript" src="{{ asset('wp-content/themes/alliance/fw/js/grid/grid.js' ) }}"></script>
 
-<script type="text/javascript" src="{{ asset('wp-content/themes/alliance/fw/js/jquery.flatshadow.js' ) }}"></script>
+<script type="text/javascript" src="{{ asset('wp-content/themes/alliance/fw/js/jquery.flatshadow.js' ) }}"></script> -->
