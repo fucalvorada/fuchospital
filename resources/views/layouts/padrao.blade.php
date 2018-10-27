@@ -343,54 +343,74 @@
 						<div class="menu_user_area menu_user_right menu_user_nav_area m_top">  
 							<ul id="menu_user" class="menu_user_nav">
 
-
-
-								<li class="menu_user_register"><a href="#popup_registration" class="popup_link popup_register_link">Register</a><div id="popup_registration" class="popup_wrap popup_registration bg_tint_light">
+								<!-- <li class="menu_user_register">
+									<a href="#popup_registration" class="popup_link popup_register_link">Register</a>
+									<div id="popup_registration" class="popup_wrap popup_registration bg_tint_light">
+										<a href="#" class="popup_close"></a>
+										<div class="form_wrap">
+											<form name="registration_form" method="post" class="popup_form registration_form">
+												<input type="hidden" name="redirect_to" value="http://alliance.themerex.net"/>
+												<div class="form_left">
+													<div class="popup_form_field login_field iconed_field"><input type="text" id="registration_username" name="registration_username"  value="" placeholder="User name (login)"></div>
+													<div class="popup_form_field email_field iconed_field"><input type="text" id="registration_email" name="registration_email" value="" placeholder="E-mail"></div>
+													<div class="popup_form_field agree_field">
+														<input type="checkbox" value="agree" id="registration_agree" name="registration_agree">
+														<label for="registration_agree">I agree with</label> <a href="#">Terms &amp; Conditions</a>
+													</div>
+													<div class="popup_form_field submit_field"><input type="submit" class="submit_button" value="Sign Up"></div>
+												</div>
+												<div class="form_right">
+													<div class="popup_form_field password_field iconed_field"><input type="password" id="registration_pwd"  name="registration_pwd"  value="" placeholder="Password"></div>
+													<div class="popup_form_field password_field iconed_field"><input type="password" id="registration_pwd2" name="registration_pwd2" value="" placeholder="Confirm Password"></div>
+													<div class="popup_form_field description_field">Minimum 6 characters</div>
+												</div>
+											</form>
+											<div class="result message_block"></div>
+										</div>
+										</div>		
+									</li> -->
+								<!-- <li class="menu_user_login">
+									<a href="#popup_login" class="popup_link popup_login_link">Login</a><div id="popup_login" class="popup_wrap popup_login bg_tint_light popup_half">
 									<a href="#" class="popup_close"></a>
 									<div class="form_wrap">
-										<form name="registration_form" method="post" class="popup_form registration_form">
-											<input type="hidden" name="redirect_to" value="http://alliance.themerex.net"/>
-											<div class="form_left">
-												<div class="popup_form_field login_field iconed_field"><input type="text" id="registration_username" name="registration_username"  value="" placeholder="User name (login)"></div>
-												<div class="popup_form_field email_field iconed_field"><input type="text" id="registration_email" name="registration_email" value="" placeholder="E-mail"></div>
-												<div class="popup_form_field agree_field">
-													<input type="checkbox" value="agree" id="registration_agree" name="registration_agree">
-													<label for="registration_agree">I agree with</label> <a href="#">Terms &amp; Conditions</a>
+										<div>
+											<form action="http://alliance.themerex.net/wp-login.php" method="post" name="login_form" class="popup_form login_form">
+												<input type="hidden" name="redirect_to" value="http://alliance.themerex.net">
+												<div class="popup_form_field login_field iconed_field icon-user-2"><input type="text" id="log" name="log" value="" placeholder="Login or Email"></div>
+												<div class="popup_form_field password_field iconed_field icon-lock-1"><input type="password" id="password" name="pwd" value="" placeholder="Password"></div>
+												<div class="popup_form_field remember_field">
+													<a href="http://alliance.themerex.net/wp-login.php?action=lostpassword&redirect_to=http%3A%2F%2Falliance.themerex.net%2F51%2F" class="forgot_password">Forgot password?</a>
+													<input type="checkbox" value="forever" id="rememberme" name="rememberme">
+													<label for="rememberme">Remember me</label>
 												</div>
-												<div class="popup_form_field submit_field"><input type="submit" class="submit_button" value="Sign Up"></div>
-											</div>
-											<div class="form_right">
-												<div class="popup_form_field password_field iconed_field"><input type="password" id="registration_pwd"  name="registration_pwd"  value="" placeholder="Password"></div>
-												<div class="popup_form_field password_field iconed_field"><input type="password" id="registration_pwd2" name="registration_pwd2" value="" placeholder="Confirm Password"></div>
-												<div class="popup_form_field description_field">Minimum 6 characters</div>
-											</div>
-										</form>
-										<div class="result message_block"></div>
-									</div>	<!-- /.registration_wrap -->
-								</div>		<!-- /.user-popUp -->
+												<div class="trx_addons_popup_form_field trx_addons_popup_form_field_agree">
+													<input type="checkbox" value="1" id="i_agree_privacy_policy_registration" name="i_agree_privacy_policy"><label for="i_agree_privacy_policy_registration"> I agree that my submitted data is being collected and stored.</label>
+												</div>				<div class="popup_form_field submit_field"><input type="submit" class="submit_button" value="Login" disabled="disabled"></div>
+												<div class="result message_block"></div>
+											</form>
+										</div>
+									</div>	
+								</div>
+							</li>-->
+
+							<li>
+								<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+									{{ Auth::user()->name }} <span class="caret"></span>
+								</a>
 							</li>
-							<li class="menu_user_login">
-							<a href="#popup_login" class="popup_link popup_login_link">Login</a><div id="popup_login" class="popup_wrap popup_login bg_tint_light popup_half">
-								<a href="#" class="popup_close"></a>
-								<div class="form_wrap">
-									<div>
-										<form action="http://alliance.themerex.net/wp-login.php" method="post" name="login_form" class="popup_form login_form">
-											<input type="hidden" name="redirect_to" value="http://alliance.themerex.net">
-											<div class="popup_form_field login_field iconed_field icon-user-2"><input type="text" id="log" name="log" value="" placeholder="Login or Email"></div>
-											<div class="popup_form_field password_field iconed_field icon-lock-1"><input type="password" id="password" name="pwd" value="" placeholder="Password"></div>
-											<div class="popup_form_field remember_field">
-												<a href="http://alliance.themerex.net/wp-login.php?action=lostpassword&redirect_to=http%3A%2F%2Falliance.themerex.net%2F51%2F" class="forgot_password">Forgot password?</a>
-												<input type="checkbox" value="forever" id="rememberme" name="rememberme">
-												<label for="rememberme">Remember me</label>
-											</div>
-											<div class="trx_addons_popup_form_field trx_addons_popup_form_field_agree">
-												<input type="checkbox" value="1" id="i_agree_privacy_policy_registration" name="i_agree_privacy_policy"><label for="i_agree_privacy_policy_registration"> I agree that my submitted data is being collected and stored.</label>
-											</div>				<div class="popup_form_field submit_field"><input type="submit" class="submit_button" value="Login" disabled="disabled"></div>
-											<div class="result message_block"></div>
-										</form>
-									</div>
-								</div>	<!-- /.login_wrap -->
-							</div>		<!-- /.popup_login -->
+							<li class="nav-item dropdown">
+
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="{{ route('logout') }}"
+									onclick="event.preventDefault();
+									document.getElementById('logout-form').submit();">
+									{{ __('Sair') }}
+								</a>
+
+								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+									@csrf
+								</form>
+							</div>
 						</li>
 
 					</ul>
@@ -476,7 +496,7 @@
 				<aside id="themerex_widget_calendar-2" class="widget_number_6 widget widget_calendar">
 					<script>
 						jQuery(document).ready(function(){
-						
+
 						});
 
 					</script>
@@ -525,6 +545,42 @@
 
 			<div class="custom_html_section">
 			</div>
+
+			<div class="window" id="janela1">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="" id="">Cadastrar Notícia</h5>
+					</div>
+					<div style="float: right;">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+					<form>
+						<div>
+							<label>Titulo</label>
+							<input type="text" name="">
+						</div>
+						<div>
+							<label>Conteúdo</label>
+							<input type="text" name="">
+						</div>
+						<div>
+							<label>Imagem</label>
+							<input type="file" name="">
+						</div>
+					</form>
+					</div>
+					<div class="modal-footer" style="bottom: 10%;position: absolute;">
+						<button type="button" class="btn btn-primary">Gravar</button>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- mascara para cobrir o site -->  
+			<div id="mascara"></div>
 
 
 			<script type="text/javascript">

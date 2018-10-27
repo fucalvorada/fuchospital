@@ -3,7 +3,9 @@
 @section('content')
    <article class="post_item post_item_attachment template_attachment post-497 attachment type-attachment status-inherit hentry">
 
-            <h1 class="post_title"><span class="post_icon icon-book-2"></span>BEM VINDO</h1>
+            <h1 class="post_title" style='text-transform: uppercase;'>
+            <span class="post_icon icon-book-2"></span>BEM VINDO, {{ Auth::user()->name }}
+            </h1>
 
             <div class="post_featured">
                 <div class="post_thumb post_nav" data-image="http://alliance.themerex.net/wp-content/uploads/2015/05/51.jpg" data-title="51">
