@@ -435,7 +435,7 @@
 					<li id="menu-item-804" class="icon-4 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-804"><a>Notícias</a>
 						<ul class="sub-menu">
 							<li id="menu-item-857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-857">
-								<a href="">Ver todas</a>
+								<a href="/noticias/lista">Ver todas</a>
 							</li>
 
 							<li id="menu-item-990" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-990">
@@ -546,39 +546,9 @@
 			<div class="custom_html_section">
 			</div>
 
-			<div class="window" id="janela1">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="" id="">Cadastrar Notícia</h5>
-					</div>
-					<div style="float: right;">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-					<form>
-						<div>
-							<label>Titulo</label>
-							<input type="text" name="">
-						</div>
-						<div>
-							<label>Conteúdo</label>
-							<input type="text" name="">
-						</div>
-						<div>
-							<label>Imagem</label>
-							<input type="file" name="">
-						</div>
-					</form>
-					</div>
-					<div class="modal-footer" style="bottom: 10%;position: absolute;">
-						<button type="button" class="btn btn-primary">Gravar</button>
-					</div>
-				</div>
+			<div class="window" id="janela1" style="display: none;">
+				@yield('modal')
 			</div>
-
-
 			<!-- mascara para cobrir o site -->  
 			<div id="mascara"></div>
 
@@ -715,7 +685,9 @@
 	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/responsive.init.js'></script>
 	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/core.reviews.js'></script>
 	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/core.utils.js'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/core.init.js'></script>
+	<script type='text/javascript' src="{{ asset('wp-content/themes/alliance/fw/js/core.init.js') }}"></script>
+
+
 	<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=4.9.8'></script>
 	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/social/social-share.min.js'></script>
 	<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
@@ -726,6 +698,9 @@
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+	<script type="text/javascript" src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('js/ckeditor/adapters/jquery.js') }}"></script>
 
 </body>
 </html>

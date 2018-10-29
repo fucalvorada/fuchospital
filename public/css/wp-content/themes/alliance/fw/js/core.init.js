@@ -20,17 +20,6 @@ jQuery(window).load(function() {
 			});
 		}, 500);
 	}
-	if(jQuery('.sidebar').length > 0)
-	{
-		setTimeout(function(){
-		   jQuery('.sidebar').masonry({
-				itemSelector: 'aside.widget',
-				columnWidth: '.grid-sizer',
-				gutter: '.gutter-sizer',
-				percentPosition: true
-			});
-		}, 500);
-	}
 });
 
 

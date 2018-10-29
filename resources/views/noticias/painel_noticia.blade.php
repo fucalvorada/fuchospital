@@ -2,8 +2,14 @@
 
 @section('content')
 
+
+<link rel="stylesheet" type="text/css" href="{{asset('css/painel_noticia.css')}}">
+
 <script type="text/javascript">
 	$(document).ready(function() {
+
+		CKEDITOR.replace( 'editor_noticia' );
+		CKEDITOR.config.autoParagraph = false;
 
 		$('#example').DataTable({
 			"entriesSearch":false,
@@ -18,15 +24,15 @@
 				"visible": true
 			}
 			]
-	});
+		});
 
-	$("#teste").click( function(ev){
-		ev.preventDefault();
+		$("#teste").click( function(ev){
+			ev.preventDefault();
 
-		var id = $(this).attr("href");
+			var id = $(this).attr("href");
 
-		var alturaTela = $(document).height();
-		var larguraTela = $(window).width();
+			var alturaTela = $(document).height();
+			var larguraTela = $(window).width();
 
         //colocando o fundo preto
         $('#mascara').css({'width':larguraTela,'height':alturaTela});
@@ -41,13 +47,13 @@
         $(".window").show();  
     });
 
-	$('.close').click(function(ev){
-		ev.preventDefault();
-		$("#mascara").hide();
-		$(".window").hide();
-	});
+		$('.close').click(function(ev){
+			ev.preventDefault();
+			$("#mascara").hide();
+			$(".window").hide();
+		});
 
-} );
+	} );
 
 
 
@@ -64,11 +70,27 @@
 	<div class="sc_reviews alignright">
 		<!-- #TRX_REVIEWS_PLACEHOLDER# -->
 	</div>
+
+	@if (Session::has('message'))
+	<div class="alert alert-info">{{ Session::get('message') }}</div>
+	@endif
 	<div class="sc_section" style="background-color:#fff; border-radius: 4px; box-shadow: 1px 2px #e8eaec;">
 
 		<button type="button" style="margin: 10px;"  id="teste">Cadastrar</button>
 
 		<div class="sc_section_overlay" style=" padding:40px;">
+
+
+			@if ($errors->any())
+			<div class="alert alert-danger">
+				<ul>
+					@foreach ($errors->all() as $error)
+					<li>{{ $error }}</li>
+					@endforeach
+				</ul>
+			</div>
+			@endif
+			
 			<table id="example"  summary="1" cellspacing="0">
 				<thead>
 					<tr>
@@ -114,35 +136,42 @@
 	</div>
 </section>
 
+@stop
 
-<style type="text/css">
-	
+@section('modal')
+<div class="modal-content">
+	<div class="modal-header">
+		<h5 class="" id="">Cadastrar Notícia</h5>
+	</div>
+	<div style="float: right;">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<form method="post"  class="form_painel_notice" action="{{ route('cadastrar') }}" enctype="multipart/form-data">
 
-	.window{
-		display:none;
-		width: 50%;
-		height: 353px;
-		position: absolute;
-		left: 25%;
-		top: 10%;
-		background: #FFF;
-		z-index: 9900;
-		padding: 10px;
-		border-radius: 10px;
-	}
+			@csrf
+			<div>
+				<label class="label_notice">Titulo</label>
+				<input class="input_fuc" type="text" name="title_notice" id="title_notice">
+			</div>
+			<div>
+				<label class="label_notice">Conteúdo</label>
+				<textarea name="editor_noticia" id="editor_noticia" rows="10" cols="80"></textarea>
+			</div>
+			<div>
+				<label class="label_notice">Imagem</label>
+				{{ csrf_field() }}
+				<input type="file" name="image_notice" id="image_notice" accept="image/*">
+			</div>
 
-	#mascara{
-		display:none;
-		position:absolute;
-		left:0;
-		top:0;
-		z-index:9000;
-		background-color:#000;
-	}
+			<div class="modal-footer" style="bottom: 10%;position: absolute;">
+				<button type="submit" class="btn btn-primary">Gravar</button>
+			</div>
+		</form>
+	</div>
 
-	.fechar{display:block; text-align:right;}
-</style>
-
-
+</div>
 
 @stop
