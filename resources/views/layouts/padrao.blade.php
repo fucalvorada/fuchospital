@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,6 +36,10 @@
 		}
 
 	</style>
+
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.css">
 	<link rel='stylesheet' id='timeline-css-css'  href='http://alliance.themerex.net/wp-content/plugins/content_timeline/css/frontend/timeline.css?ver=4.9.8' type='text/css' media='all' />
 	<link rel='stylesheet' id='customScroll-css-css'  href='http://alliance.themerex.net/wp-content/plugins/content_timeline/css/frontend/jquery.mCustomScrollbar.css?ver=4.9.8' type='text/css' media='all' />
 	<link rel='stylesheet' id='prettyPhoto-css-css'  href='http://alliance.themerex.net/wp-content/plugins/content_timeline/css/frontend/prettyPhoto.css?ver=4.9.8' type='text/css' media='all' />
@@ -213,6 +218,16 @@
 		}
 		.sc_slider_swiper .sc_slider_info .sc_slider_reviews .reviews_stars.reviews_style_heart:before,del,.sc_highlight_style_3,.page_top_wrap .page_title,.page_top_wrap .breadcrumbs a.breadcrumbs_item:hover,.comments_list_wrap .comment_reply a{
 			color:#f5393d
+		}
+
+		.page_content_wrap{
+			height: 100% !important
+		}
+
+		@media (max-width: 768px){
+			.sidebar aside.widget {
+				width: calc(47% - 54px) !important;
+			}
 		}
 		.sc_audio_player.sc_audio_image .mejs-button.mejs-playpause-button.mejs-play button,.sc_audio_player.sc_audio_info .mejs-button.mejs-playpause-button.mejs-play button:hover,.sc_slider_controls_wrap a:hover,.sc_highlight_style_2,.sc_dropcaps.sc_dropcaps_style_2 .sc_dropcaps_item,.sc_infobox.sc_infobox_style_error,.page_top_wrap .page_title .page_icon{
 			background-color:#f5393d
@@ -494,12 +509,7 @@
 				<div class="grid-sizer"></div><div class="gutter-sizer"></div>
 
 				<aside id="themerex_widget_calendar-2" class="widget_number_6 widget widget_calendar">
-					<script>
-						jQuery(document).ready(function(){
-
-						});
-
-					</script>
+					
 					<h5 class="widget_title"></h5>
 					<table id="wp-calendar-591983960" class="wp-calendar">
 						<thead>
@@ -509,198 +519,203 @@
 									<th class="month_cur" colspan="5">October </th>
 									<th class="month_next">&nbsp;</th>
 								</tr><tr>
-								<th class="weekday" scope="col" title="Monday">M</th><th class="weekday" scope="col" title="Tuesday">T</th><th class="weekday" scope="col" title="Wednesday">W</th><th class="weekday" scope="col" title="Thursday">T</th><th class="weekday" scope="col" title="Friday">F</th><th class="weekday" scope="col" title="Saturday">S</th><th class="weekday" scope="col" title="Sunday">S</th></tr></thead><tbody><tr><td class="day"><span class="day_wrap">1</span></td><td class="day"><span class="day_wrap">2</span></td><td class="day"><span class="day_wrap">3</span></td><td class="day"><span class="day_wrap">4</span></td><td class="day"><span class="day_wrap">5</span></td><td class="day"><span class="day_wrap">6</span></td><td class="day"><span class="day_wrap">7</span></td></tr><tr><td class="day"><span class="day_wrap">8</span></td><td class="day"><span class="day_wrap">9</span></td><td class="day"><span class="day_wrap">10</span></td><td class="day"><span class="day_wrap">11</span></td><td class="day"><span class="day_wrap">12</span></td><td class="day"><span class="day_wrap">13</span></td><td class="day"><span class="day_wrap">14</span></td></tr><tr><td class="day"><span class="day_wrap">15</span></td><td class="day"><span class="day_wrap">16</span></td><td class="today"><span class="day_wrap">17</span></td><td class="day"><span class="day_wrap">18</span></td><td class="day"><span class="day_wrap">19</span></td><td class="day"><span class="day_wrap">20</span></td><td class="day"><span class="day_wrap">21</span></td></tr><tr><td class="day"><span class="day_wrap">22</span></td><td class="day"><span class="day_wrap">23</span></td><td class="day"><span class="day_wrap">24</span></td><td class="day"><span class="day_wrap">25</span></td><td class="day"><span class="day_wrap">26</span></td><td class="day"><span class="day_wrap">27</span></td><td class="day"><span class="day_wrap">28</span></td></tr><tr><td class="day"><span class="day_wrap">29</span></td><td class="day"><span class="day_wrap">30</span></td><td class="day"><span class="day_wrap">31</span></td><td class="pad" colspan="4"><span class="day_wrap">&nbsp;</span></td></tr></tbody></table></aside>
-
-
-
-								<aside id="themerex_widget_recent_posts-6" class="widget_number_2 widget widget_recent_posts"><h5 class="widget_title">Latest Groups News</h5><article class="post_item with_thumb first"><div class="post_thumb"><img class="wp-post-image" width="75" height="75" alt="Id est laborum et dolorum fuga" src="http://alliance.themerex.net/wp-content/uploads/2015/05/52-75x75.jpg"></div><div class="post_content"><h6 class="post_title"><a href="http://alliance.themerex.net/id-est-laborum-et-dolorum-fuga/">Id est laborum et dolorum fuga</a></h6><div class="post_info"><span class="post_info_item post_info_posted"><a href="http://alliance.themerex.net/id-est-laborum-et-dolorum-fuga/" class="post_info_date">July 21, 2015</a></span><span class="post_info_item post_info_posted_by">by <a href="http://alliance.themerex.net/author/admin/" class="post_info_author">Kate Dillon (Development)</a></span></div></div></article><article class="post_item with_thumb"><div class="post_thumb"><img class="wp-post-image" width="75" height="75" alt="Inventore veritatis et quasi" src="http://alliance.themerex.net/wp-content/uploads/2015/05/60-75x75.jpg"></div><div class="post_content"><h6 class="post_title"><a href="http://alliance.themerex.net/inventore-veritatis-et-quasi/">Inventore veritatis et quasi</a></h6><div class="post_info"><span class="post_info_item post_info_posted"><a href="http://alliance.themerex.net/inventore-veritatis-et-quasi/" class="post_info_date">July 21, 2015</a></span><span class="post_info_item post_info_posted_by">by <a href="http://alliance.themerex.net/author/admin/" class="post_info_author">Kate Dillon (Development)</a></span></div></div></article><article class="post_item with_thumb"><div class="post_thumb"><img class="wp-post-image" width="75" height="75" alt="Ed quia non numquam eius" src="http://alliance.themerex.net/wp-content/uploads/2015/05/59-75x75.jpg"></div><div class="post_content"><h6 class="post_title"><a href="http://alliance.themerex.net/ed-quia-non-numquam-eius/">Ed quia non numquam eius</a></h6><div class="post_info"><span class="post_info_item post_info_posted"><a href="http://alliance.themerex.net/ed-quia-non-numquam-eius/" class="post_info_date">July 21, 2015</a></span><span class="post_info_item post_info_posted_by">by <a href="http://alliance.themerex.net/author/admin/" class="post_info_author">Kate Dillon (Development)</a></span></div></div></article><article class="post_item with_thumb"><div class="post_thumb"><img class="wp-post-image" width="75" height="75" alt="Consectetur adipiscing elit" src="http://alliance.themerex.net/wp-content/uploads/2015/05/53-75x75.jpg"></div><div class="post_content"><h6 class="post_title"><a href="http://alliance.themerex.net/consectetur-adipiscing-elit/">Consectetur adipiscing elit</a></h6><div class="post_info"><span class="post_info_item post_info_posted"><a href="http://alliance.themerex.net/consectetur-adipiscing-elit/" class="post_info_date">July 21, 2015</a></span><span class="post_info_item post_info_posted_by">by <a href="http://alliance.themerex.net/author/admin/" class="post_info_author">Kate Dillon (Development)</a></span></div></div></article><article class="post_item with_thumb"><div class="post_thumb"><img class="wp-post-image" width="75" height="75" alt="Masonry Gallery" src="http://alliance.themerex.net/wp-content/uploads/2015/05/52-75x75.jpg"></div><div class="post_content"><h6 class="post_title"><a href="http://alliance.themerex.net/masonry-gallery-1/">Masonry Gallery</a></h6><div class="post_info"><span class="post_info_item post_info_posted"><a href="http://alliance.themerex.net/masonry-gallery-1/" class="post_info_date">July 21, 2015</a></span><span class="post_info_item post_info_posted_by">by <a href="http://alliance.themerex.net/author/admin/" class="post_info_author">Kate Dillon (Development)</a></span></div></div></article>
-								</aside>
-
-
-
-								<aside id="archives-3" class="widget_number_5 widget widget_archive"><h5 class="widget_title">Archives</h5>		<ul>
-									<li><a href='http://alliance.themerex.net/2015/07/'>July 2015</a></li>
-									<li><a href='http://alliance.themerex.net/2015/06/'>June 2015</a></li>
-									<li><a href='http://alliance.themerex.net/2015/05/'>May 2015</a></li>
-									<li><a href='http://alliance.themerex.net/2015/04/'>April 2015</a></li>
-									<li><a href='http://alliance.themerex.net/2015/03/'>March 2015</a></li>
-								</ul>
+								<th class="weekday" scope="col" title="Monday">M</th><th class="weekday" scope="col" title="Tuesday">T</th><th class="weekday" scope="col" title="Wednesday">W</th><th class="weekday" scope="col" title="Thursday">T</th><th class="weekday" scope="col" title="Friday">F</th><th class="weekday" scope="col" title="Saturday">S</th><th class="weekday" scope="col" title="Sunday">S</th></tr></thead><tbody><tr><td class="day"><span class="day_wrap">1</span></td><td class="day"><span class="day_wrap">2</span></td><td class="day"><span class="day_wrap">3</span></td><td class="day"><span class="day_wrap">4</span></td><td class="day"><span class="day_wrap">5</span></td><td class="day"><span class="day_wrap">6</span></td><td class="day"><span class="day_wrap">7</span></td></tr><tr><td class="day"><span class="day_wrap">8</span></td><td class="day"><span class="day_wrap">9</span></td><td class="day"><span class="day_wrap">10</span></td><td class="day"><span class="day_wrap">11</span></td><td class="day"><span class="day_wrap">12</span></td><td class="day"><span class="day_wrap">13</span></td><td class="day"><span class="day_wrap">14</span></td></tr><tr><td class="day"><span class="day_wrap">15</span></td><td class="day"><span class="day_wrap">16</span></td><td class="today"><span class="day_wrap">17</span></td><td class="day"><span class="day_wrap">18</span></td><td class="day"><span class="day_wrap">19</span></td><td class="day"><span class="day_wrap">20</span></td><td class="day"><span class="day_wrap">21</span></td></tr><tr><td class="day"><span class="day_wrap">22</span></td><td class="day"><span class="day_wrap">23</span></td><td class="day"><span class="day_wrap">24</span></td><td class="day"><span class="day_wrap">25</span></td><td class="day"><span class="day_wrap">26</span></td><td class="day"><span class="day_wrap">27</span></td><td class="day"><span class="day_wrap">28</span></td></tr><tr><td class="day"><span class="day_wrap">29</span></td><td class="day"><span class="day_wrap">30</span></td><td class="day"><span class="day_wrap">31</span></td><td class="pad" colspan="4"><span class="day_wrap">&nbsp;</span></td></tr></tbody></table>
 							</aside>
 
-						</div> <!-- /.sidebar -->
-
-					</div> <!-- </div> class="content_wrap"> -->			
-				</div>		<!-- </.page_content_wrap> -->
 
 
-				<div class="copyright_wrap">
-					<div class="content_wrap">
-						<p>© FUC ALVORADA 2018 Todo direitos reservados. 
-						</div>
-					</div>
-					<a href="#" class="scroll_to_top icon-angle-up-1" title="Scroll to top"></a>
-				</div>	
-			</div>		
+		<!-- 						<aside id="themerex_widget_recent_posts-6" class="widget_number_2 widget widget_recent_posts"><h5 class="widget_title">Latest Groups News</h5><article class="post_item with_thumb first"><div class="post_thumb"><img class="wp-post-image" width="75" height="75" alt="Id est laborum et dolorum fuga" src="http://alliance.themerex.net/wp-content/uploads/2015/05/52-75x75.jpg"></div><div class="post_content"><h6 class="post_title"><a href="http://alliance.themerex.net/id-est-laborum-et-dolorum-fuga/">Id est laborum et dolorum fuga</a></h6><div class="post_info"><span class="post_info_item post_info_posted"><a href="http://alliance.themerex.net/id-est-laborum-et-dolorum-fuga/" class="post_info_date">July 21, 2015</a></span><span class="post_info_item post_info_posted_by">by <a href="http://alliance.themerex.net/author/admin/" class="post_info_author">Kate Dillon (Development)</a></span></div></div></article><article class="post_item with_thumb"><div class="post_thumb"><img class="wp-post-image" width="75" height="75" alt="Inventore veritatis et quasi" src="http://alliance.themerex.net/wp-content/uploads/2015/05/60-75x75.jpg"></div><div class="post_content"><h6 class="post_title"><a href="http://alliance.themerex.net/inventore-veritatis-et-quasi/">Inventore veritatis et quasi</a></h6><div class="post_info"><span class="post_info_item post_info_posted"><a href="http://alliance.themerex.net/inventore-veritatis-et-quasi/" class="post_info_date">July 21, 2015</a></span><span class="post_info_item post_info_posted_by">by <a href="http://alliance.themerex.net/author/admin/" class="post_info_author">Kate Dillon (Development)</a></span></div></div></article><article class="post_item with_thumb"><div class="post_thumb"><img class="wp-post-image" width="75" height="75" alt="Ed quia non numquam eius" src="http://alliance.themerex.net/wp-content/uploads/2015/05/59-75x75.jpg"></div><div class="post_content"><h6 class="post_title"><a href="http://alliance.themerex.net/ed-quia-non-numquam-eius/">Ed quia non numquam eius</a></h6><div class="post_info"><span class="post_info_item post_info_posted"><a href="http://alliance.themerex.net/ed-quia-non-numquam-eius/" class="post_info_date">July 21, 2015</a></span><span class="post_info_item post_info_posted_by">by <a href="http://alliance.themerex.net/author/admin/" class="post_info_author">Kate Dillon (Development)</a></span></div></div></article><article class="post_item with_thumb"><div class="post_thumb"><img class="wp-post-image" width="75" height="75" alt="Consectetur adipiscing elit" src="http://alliance.themerex.net/wp-content/uploads/2015/05/53-75x75.jpg"></div><div class="post_content"><h6 class="post_title"><a href="http://alliance.themerex.net/consectetur-adipiscing-elit/">Consectetur adipiscing elit</a></h6><div class="post_info"><span class="post_info_item post_info_posted"><a href="http://alliance.themerex.net/consectetur-adipiscing-elit/" class="post_info_date">July 21, 2015</a></span><span class="post_info_item post_info_posted_by">by <a href="http://alliance.themerex.net/author/admin/" class="post_info_author">Kate Dillon (Development)</a></span></div></div></article><article class="post_item with_thumb"><div class="post_thumb"><img class="wp-post-image" width="75" height="75" alt="Masonry Gallery" src="http://alliance.themerex.net/wp-content/uploads/2015/05/52-75x75.jpg"></div><div class="post_content"><h6 class="post_title"><a href="http://alliance.themerex.net/masonry-gallery-1/">Masonry Gallery</a></h6><div class="post_info"><span class="post_info_item post_info_posted"><a href="http://alliance.themerex.net/masonry-gallery-1/" class="post_info_date">July 21, 2015</a></span><span class="post_info_item post_info_posted_by">by <a href="http://alliance.themerex.net/author/admin/" class="post_info_author">Kate Dillon (Development)</a></span></div></div></article>
+	</aside> -->
 
 
-			<div class="custom_html_section">
-			</div>
 
-			<div class="window" id="janela1" style="display: none;">
-				@yield('modal')
-			</div>
-			<!-- mascara para cobrir o site -->  
-			<div id="mascara"></div>
+	<aside id="archives-3" class="widget_number_5 widget widget_archive"><h5 class="widget_title">Archives</h5>		<ul>
+		<li><a href='http://alliance.themerex.net/2015/07/'>July 2015</a></li>
+		<li><a href='http://alliance.themerex.net/2015/06/'>June 2015</a></li>
+		<li><a href='http://alliance.themerex.net/2015/05/'>May 2015</a></li>
+		<li><a href='http://alliance.themerex.net/2015/04/'>April 2015</a></li>
+		<li><a href='http://alliance.themerex.net/2015/03/'>March 2015</a></li>
+	</ul>
+</aside>
 
+</div> <!-- /.sidebar -->
 
-			<script type="text/javascript">
-				jQuery(document).ready(function() {
-
-					THEMEREX_GLOBALS["strings"] = {
-						bookmark_add: "Add the bookmark",
-						bookmark_added:		"Current page has been successfully added to the bookmarks. You can see it in the right panel on the tab \'Bookmarks\'",
-						bookmark_del: "Delete this bookmark",
-						bookmark_title:		"Enter bookmark title",
-						bookmark_exists:		"Current page already exists in the bookmarks list",
-						search_error:		"Error occurs in AJAX search! Please type your query and press search icon for the traditional search way.",
-						email_confirm:		"On the e-mail address <b>%s</b> we sent a confirmation email.<br>Please, open it and click on the link.",
-						reviews_vote:		"Thanks for your vote! New average rating is:",
-						reviews_error:		"Error saving your vote! Please try again later.",
-						error_like:			"Error saving your like! Please try again later.",
-						error_global:		"Global error text",
-						name_empty:			"The name can\'t be empty",
-						name_long:			"Too long name",
-						email_empty:			"Too short (or empty) email address",
-						email_long:			"Too long email address",
-						email_not_valid:		"Invalid email address",
-						subject_empty:		"The subject can\'t be empty",
-						subject_long:		"Too long subject",
-						text_empty:			"The message text can\'t be empty",
-						text_long:			"Too long message text",
-						send_complete:		"Send message complete!",
-						send_error:			"Transmit failed!",
-						login_empty:			"The Login field can\'t be empty",
-						login_long:			"Too long login field",
-						login_success:		"Login success! The page will be reloaded in 3 sec.",
-						login_failed:		"Login failed!",
-						password_empty:		"The password can\'t be empty and shorter then 4 characters",
-						password_long:		"Too long password",
-						password_not_equal:	"The passwords in both fields are not equal",
-						registration_success:"Registration success! Please log in!",
-						registration_failed:	"Registration failed!",
-						geocode_error:		"Geocode was not successful for the following reason:",
-						googlemap_not_avail:	"Google map API not available!",
-						editor_save_success:	"Post content saved!",
-						editor_save_error:	"Error saving post data!",
-						editor_delete_post:	"You really want to delete the current post?",
-						editor_delete_post_header:"Delete post",
-						editor_delete_success:	"Post deleted!",
-						editor_delete_error:		"Error deleting post!",
-						editor_caption_cancel:	"Cancel",
-						editor_caption_close:	"Close"
-					};
-				});
-
-			</script>
-			<script type="text/javascript">jQuery(document).ready(function() {
-
-				THEMEREX_GLOBALS['ajax_url'] = 'http://alliance.themerex.net/wp-admin/admin-ajax.php';
-				THEMEREX_GLOBALS['ajax_nonce']		= '614dc84bf0';
-				THEMEREX_GLOBALS['ajax_nonce_editor'] = '0f13e17c13';
-				THEMEREX_GLOBALS['ajax_login']		= false;
-				THEMEREX_GLOBALS['site_url']= 'http://alliance.themerex.net';
-				THEMEREX_GLOBALS['vc_edit_mode']		= false;
-				THEMEREX_GLOBALS['theme_font']		= 'Open Sans';
-				THEMEREX_GLOBALS['theme_skin']		= 'alliance';
-				THEMEREX_GLOBALS['theme_skin_bg']	= '';
-				THEMEREX_GLOBALS['slider_height']	= 100;
-				THEMEREX_GLOBALS['system_message']	= {message: '',status: '',header: ''};
-
-				THEMEREX_GLOBALS['user_logged_in']	= false;THEMEREX_GLOBALS['toc_menu']		= 'float';
-				THEMEREX_GLOBALS['toc_menu_home']	= false;THEMEREX_GLOBALS['toc_menu_top']	= false;
-				THEMEREX_GLOBALS['menu_fixed']		= false;THEMEREX_GLOBALS['menu_relayout']	= 0;
-				THEMEREX_GLOBALS['menu_responsive']	= 0;
-				THEMEREX_GLOBALS['menu_slider']     = false;
-				THEMEREX_GLOBALS['demo_time']		= 0;
-				THEMEREX_GLOBALS['media_elements_enabled'] = true;
-				THEMEREX_GLOBALS['ajax_search_enabled'] 	= true;
-				THEMEREX_GLOBALS['ajax_search_min_length']	= 3;
-				THEMEREX_GLOBALS['ajax_search_delay']		= 200;
-				THEMEREX_GLOBALS['css_animation']      = true;
-				THEMEREX_GLOBALS['menu_animation_in']  = '';
-				THEMEREX_GLOBALS['menu_animation_out'] = '';
-				THEMEREX_GLOBALS['popup_engine']	= 'magnific';
-				THEMEREX_GLOBALS['popup_gallery']	= true;
-				THEMEREX_GLOBALS['email_mask']	= '^([a-zA-Z0-9_\-]+\.)*[a-zA-Z0-9_\-]+@[a-z0-9_\-]+(\.[a-z0-9_\-]+)*\.[a-z]{2,6}$';
-				THEMEREX_GLOBALS['contacts_maxlength']	= 1000;
-				THEMEREX_GLOBALS['comments_maxlength']	= 1000;
-				THEMEREX_GLOBALS['remember_visitors_settings']	= false;
-				THEMEREX_GLOBALS['admin_mode']			= false;
-				THEMEREX_GLOBALS['isotope_resize_delta']	= 0.3;
-				THEMEREX_GLOBALS['error_message_box']	= null;
-				THEMEREX_GLOBALS['viewmore_busy']		= false;
-				THEMEREX_GLOBALS['video_resize_inited']	= false;
-				THEMEREX_GLOBALS['top_panel_height']	= 0;
-			});
-		</script>
-
-		<script type="text/javascript">jQuery(document).ready(function() {
-			if (THEMEREX_GLOBALS['theme_font']=='') THEMEREX_GLOBALS['theme_font'] = 'Roboto';
-
-			THEMEREX_GLOBALS['link_color'] = '';
-			THEMEREX_GLOBALS['menu_color'] = '';
-			THEMEREX_GLOBALS['user_color'] = '';
-		});
-	</script>
-
-	<link rel='stylesheet' id='themerex-messages-style-css'  href='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/core.messages/core.messages.css' type='text/css' media='all' />
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/jquery/ui/draggable.min.js?ver=1.11.4'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
-	<script type='text/javascript'>
-		jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
-	</script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/booked-appointments/assets/js/spin.min.js?ver=2.0.1'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/booked-appointments/assets/js/spin.jquery.js?ver=2.0.1'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/booked-appointments/assets/js/tooltipster/js/jquery.tooltipster.min.js?ver=3.3.0'></script>
-	<script type='text/javascript'>
-		/* <![CDATA[ */
-		var booked_js_vars = {"ajax_url":"http:\/\/alliance.themerex.net\/wp-admin\/admin-ajax.php","profilePage":"","publicAppointments":"","i18n_confirm_appt_delete":"Are you sure you want to cancel this appointment?","i18n_please_wait":"Please wait ...","i18n_wrong_username_pass":"Wrong username\/password combination.","i18n_fill_out_required_fields":"Please fill out all required fields.","i18n_guest_appt_required_fields":"Please enter your name to book an appointment.","i18n_appt_required_fields":"Please enter your name, your email address and choose a password to book an appointment.","i18n_appt_required_fields_guest":"Please fill in all \"Information\" fields.","i18n_password_reset":"Please check your email for instructions on resetting your password.","i18n_password_reset_error":"That username or email is not recognized."};
-		/* ]]> */
-	</script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/booked-appointments/assets/js/functions.js?ver=2.1'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/bbpress/templates/default/js/editor.js?ver=2.5.14-6684'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/comment-reply.min.js?ver=4.9.8'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/responsive-poll/public/assets/js/vendors/chartjs_new.js?ver=1.4.0'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/responsive-poll/public/assets/js/app/legend.js?ver=1.4.0'></script>
-	<script type='text/javascript'>
-		/* <![CDATA[ */
-		var ajaxurl = "http:\/\/alliance.themerex.net\/wp-admin\/admin-ajax.php";
-		/* ]]> */
-	</script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/responsive-poll/public/assets/js/app/poll.js?ver=1.4.0'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/responsive-poll/public/assets/js/app/poll-init.js?ver=1.4.0'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/responsive.init.js'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/core.reviews.js'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/core.utils.js'></script>
-	<script type='text/javascript' src="{{ asset('wp-content/themes/alliance/fw/js/core.init.js') }}"></script>
+</div> <!-- </div> class="content_wrap"> -->			
+</div>		<!-- </.page_content_wrap> -->
 
 
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=4.9.8'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/social/social-share.min.js'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/core.messages/core.messages.js'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/shortcodes/shortcodes.js'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/grid/grid.js'></script>
-	<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/jquery.flatshadow.js'></script>
+<div class="copyright_wrap">
+	<div class="content_wrap">
+		<p>© FUC ALVORADA 2018 Todo direitos reservados. 
+		</div>
+	</div>
+	<a href="#" class="scroll_to_top icon-angle-up-1" title="Scroll to top"></a>
+</div>	
+</div>		
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
-	<script type="text/javascript" src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('js/ckeditor/adapters/jquery.js') }}"></script>
+<div class="custom_html_section">
+</div>
+
+<div class="window" id="janela1" style="display: none;">
+	@yield('modal')
+</div>
+
+<div class="window2" id="janela2" style="display: none;">
+	@yield('modalEdit')
+</div>
+<!-- mascara para cobrir o site -->  
+<div id="mascara"></div>
+
+
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+
+		THEMEREX_GLOBALS["strings"] = {
+			bookmark_add: "Add the bookmark",
+			bookmark_added:		"Current page has been successfully added to the bookmarks. You can see it in the right panel on the tab \'Bookmarks\'",
+			bookmark_del: "Delete this bookmark",
+			bookmark_title:		"Enter bookmark title",
+			bookmark_exists:		"Current page already exists in the bookmarks list",
+			search_error:		"Error occurs in AJAX search! Please type your query and press search icon for the traditional search way.",
+			email_confirm:		"On the e-mail address <b>%s</b> we sent a confirmation email.<br>Please, open it and click on the link.",
+			reviews_vote:		"Thanks for your vote! New average rating is:",
+			reviews_error:		"Error saving your vote! Please try again later.",
+			error_like:			"Error saving your like! Please try again later.",
+			error_global:		"Global error text",
+			name_empty:			"The name can\'t be empty",
+			name_long:			"Too long name",
+			email_empty:			"Too short (or empty) email address",
+			email_long:			"Too long email address",
+			email_not_valid:		"Invalid email address",
+			subject_empty:		"The subject can\'t be empty",
+			subject_long:		"Too long subject",
+			text_empty:			"The message text can\'t be empty",
+			text_long:			"Too long message text",
+			send_complete:		"Send message complete!",
+			send_error:			"Transmit failed!",
+			login_empty:			"The Login field can\'t be empty",
+			login_long:			"Too long login field",
+			login_success:		"Login success! The page will be reloaded in 3 sec.",
+			login_failed:		"Login failed!",
+			password_empty:		"The password can\'t be empty and shorter then 4 characters",
+			password_long:		"Too long password",
+			password_not_equal:	"The passwords in both fields are not equal",
+			registration_success:"Registration success! Please log in!",
+			registration_failed:	"Registration failed!",
+			geocode_error:		"Geocode was not successful for the following reason:",
+			googlemap_not_avail:	"Google map API not available!",
+			editor_save_success:	"Post content saved!",
+			editor_save_error:	"Error saving post data!",
+			editor_delete_post:	"You really want to delete the current post?",
+			editor_delete_post_header:"Delete post",
+			editor_delete_success:	"Post deleted!",
+			editor_delete_error:		"Error deleting post!",
+			editor_caption_cancel:	"Cancel",
+			editor_caption_close:	"Close"
+		};
+	});
+
+</script>
+<script type="text/javascript">jQuery(document).ready(function() {
+
+	THEMEREX_GLOBALS['ajax_url'] = 'http://alliance.themerex.net/wp-admin/admin-ajax.php';
+	THEMEREX_GLOBALS['ajax_nonce']		= '614dc84bf0';
+	THEMEREX_GLOBALS['ajax_nonce_editor'] = '0f13e17c13';
+	THEMEREX_GLOBALS['ajax_login']		= false;
+	THEMEREX_GLOBALS['site_url']= 'http://alliance.themerex.net';
+	THEMEREX_GLOBALS['vc_edit_mode']		= false;
+	THEMEREX_GLOBALS['theme_font']		= 'Open Sans';
+	THEMEREX_GLOBALS['theme_skin']		= 'alliance';
+	THEMEREX_GLOBALS['theme_skin_bg']	= '';
+	THEMEREX_GLOBALS['slider_height']	= 100;
+	THEMEREX_GLOBALS['system_message']	= {message: '',status: '',header: ''};
+
+	THEMEREX_GLOBALS['user_logged_in']	= false;THEMEREX_GLOBALS['toc_menu']		= 'float';
+	THEMEREX_GLOBALS['toc_menu_home']	= false;THEMEREX_GLOBALS['toc_menu_top']	= false;
+	THEMEREX_GLOBALS['menu_fixed']		= false;THEMEREX_GLOBALS['menu_relayout']	= 0;
+	THEMEREX_GLOBALS['menu_responsive']	= 0;
+	THEMEREX_GLOBALS['menu_slider']     = false;
+	THEMEREX_GLOBALS['demo_time']		= 0;
+	THEMEREX_GLOBALS['media_elements_enabled'] = true;
+	THEMEREX_GLOBALS['ajax_search_enabled'] 	= true;
+	THEMEREX_GLOBALS['ajax_search_min_length']	= 3;
+	THEMEREX_GLOBALS['ajax_search_delay']		= 200;
+	THEMEREX_GLOBALS['css_animation']      = true;
+	THEMEREX_GLOBALS['menu_animation_in']  = '';
+	THEMEREX_GLOBALS['menu_animation_out'] = '';
+	THEMEREX_GLOBALS['popup_engine']	= 'magnific';
+	THEMEREX_GLOBALS['popup_gallery']	= true;
+	THEMEREX_GLOBALS['email_mask']	= '^([a-zA-Z0-9_\-]+\.)*[a-zA-Z0-9_\-]+@[a-z0-9_\-]+(\.[a-z0-9_\-]+)*\.[a-z]{2,6}$';
+	THEMEREX_GLOBALS['contacts_maxlength']	= 1000;
+	THEMEREX_GLOBALS['comments_maxlength']	= 1000;
+	THEMEREX_GLOBALS['remember_visitors_settings']	= false;
+	THEMEREX_GLOBALS['admin_mode']			= false;
+	THEMEREX_GLOBALS['isotope_resize_delta']	= 0.3;
+	THEMEREX_GLOBALS['error_message_box']	= null;
+	THEMEREX_GLOBALS['viewmore_busy']		= false;
+	THEMEREX_GLOBALS['video_resize_inited']	= false;
+	THEMEREX_GLOBALS['top_panel_height']	= 0;
+});
+</script>
+
+<script type="text/javascript">jQuery(document).ready(function() {
+	if (THEMEREX_GLOBALS['theme_font']=='') THEMEREX_GLOBALS['theme_font'] = 'Roboto';
+
+	THEMEREX_GLOBALS['link_color'] = '';
+	THEMEREX_GLOBALS['menu_color'] = '';
+	THEMEREX_GLOBALS['user_color'] = '';
+});
+</script>
+
+<link rel='stylesheet' id='themerex-messages-style-css'  href='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/core.messages/core.messages.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/jquery/ui/draggable.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+	jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/booked-appointments/assets/js/spin.min.js?ver=2.0.1'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/booked-appointments/assets/js/spin.jquery.js?ver=2.0.1'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/booked-appointments/assets/js/tooltipster/js/jquery.tooltipster.min.js?ver=3.3.0'></script>
+<script type='text/javascript'>
+	/* <![CDATA[ */
+	var booked_js_vars = {"ajax_url":"http:\/\/alliance.themerex.net\/wp-admin\/admin-ajax.php","profilePage":"","publicAppointments":"","i18n_confirm_appt_delete":"Are you sure you want to cancel this appointment?","i18n_please_wait":"Please wait ...","i18n_wrong_username_pass":"Wrong username\/password combination.","i18n_fill_out_required_fields":"Please fill out all required fields.","i18n_guest_appt_required_fields":"Please enter your name to book an appointment.","i18n_appt_required_fields":"Please enter your name, your email address and choose a password to book an appointment.","i18n_appt_required_fields_guest":"Please fill in all \"Information\" fields.","i18n_password_reset":"Please check your email for instructions on resetting your password.","i18n_password_reset_error":"That username or email is not recognized."};
+	/* ]]> */
+</script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/booked-appointments/assets/js/functions.js?ver=2.1'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/bbpress/templates/default/js/editor.js?ver=2.5.14-6684'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/comment-reply.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/responsive-poll/public/assets/js/vendors/chartjs_new.js?ver=1.4.0'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/responsive-poll/public/assets/js/app/legend.js?ver=1.4.0'></script>
+<script type='text/javascript'>
+	/* <![CDATA[ */
+	var ajaxurl = "http:\/\/alliance.themerex.net\/wp-admin\/admin-ajax.php";
+	/* ]]> */
+</script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/responsive-poll/public/assets/js/app/poll.js?ver=1.4.0'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/plugins/responsive-poll/public/assets/js/app/poll-init.js?ver=1.4.0'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/responsive.init.js'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/core.reviews.js'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/core.utils.js'></script>
+<script type='text/javascript' src="{{ asset('wp-content/themes/alliance/fw/js/core.init.js') }}"></script>
+
+
+<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/social/social-share.min.js'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/core.messages/core.messages.js'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/shortcodes/shortcodes.js'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/grid/grid.js'></script>
+<script type='text/javascript' src='http://alliance.themerex.net/wp-content/themes/alliance/fw/js/jquery.flatshadow.js'></script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/ckeditor/adapters/jquery.js') }}"></script>
 
 </body>
 </html>

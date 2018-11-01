@@ -39,7 +39,7 @@ class NoticiasController extends Controller
 			'title_notice' => 'required',
 			'editor_noticia' => 'required',
 			'image_notice'	=> 'required',
-		]);
+			]);
 
 		$noticia = new Noticia;
 		$noticia->title = $request->title_notice;
@@ -83,6 +83,52 @@ class NoticiasController extends Controller
 				return $upload;
 			}
 		}
+	}
+
+	public function edit($id)
+	{
+
+		$noticia = Noticia::find($id);
+		if(!$noticia){
+			abort(404);
+		}
+
+		return response()->json($noticia);
+	}
+
+	public function update(Request $request)
+	{
+
+		$this->validate($request,[
+			'title_notice' => 'required',
+			'editor_noticia' => 'required',
+			]);
+
+		$noticia = Noticia::find($request->id_notice);
+		$noticia->title = $request->title_notice;
+		$noticia->body 	= $request->editor_noticia;
+
+		if( $noticia->save() ){
+			return redirect()->back()->with('message', 'Editado com sucesso!'); 
+		}else{
+			return redirect()->back()->with('message', 'Não foi poss´vel editar!'); 
+		}
+		
+	}
+
+	public function destroy($id)
+	{
+
+		$noticia = Noticia::find($id);
+
+		if( $noticia->delete() ){
+			$result = 1;
+		}else{
+			$result = 0;
+		}
+
+		return response()->json($result);
+
 	}
 
 }

@@ -1,4 +1,4 @@
-.window{
+.window, .window2{
 	display:none;
 	width: 50%;
 	height: 100%;
@@ -27,14 +27,29 @@
 
 .form_painel_notice{
 	width: 90%;
-    margin: 0 auto;
-    margin-top: 10%;
+	margin: 0 auto;
+	margin-top: 10%;
 }
 .label_notice{
 	display:block;
 }
 
 .input_fuc{
-    width: 100%;
+	width: 100%;
+}
+
+.acoes a span{
+	border-radius: 7px;
+	padding: 4px;
+	font-size: 12px;
+	color: #fff;
+}
+
+.spanEdit{
+	background: #28c3d4;
+}
+
+.spanDel{
+	background: #0003d4;
 }
 
