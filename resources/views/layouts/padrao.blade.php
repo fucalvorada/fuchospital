@@ -40,7 +40,8 @@
 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.css">
-	<link rel='stylesheet' id='timeline-css-css'  href='http://alliance.themerex.net/wp-content/plugins/content_timeline/css/frontend/timeline.css?ver=4.9.8' type='text/css' media='all' />
+	<link rel='stylesheet' id='timeline-css-css'  href='{{ asset("wp-content/plugins/content_timeline/css/frontend/timeline.css") }}' type='text/css' media='all' />
+
 	<link rel='stylesheet' id='customScroll-css-css'  href='http://alliance.themerex.net/wp-content/plugins/content_timeline/css/frontend/jquery.mCustomScrollbar.css?ver=4.9.8' type='text/css' media='all' />
 	<link rel='stylesheet' id='prettyPhoto-css-css'  href='http://alliance.themerex.net/wp-content/plugins/content_timeline/css/frontend/prettyPhoto.css?ver=4.9.8' type='text/css' media='all' />
 	<link rel='stylesheet' id='my_timeline_font_awesome-css'  href='http://alliance.themerex.net/wp-content/plugins/content_timeline//css/frontend/awesome/font-awesome.css?ver=4.9.8' type='text/css' media='all' />
@@ -78,7 +79,15 @@
 	<link rel='stylesheet' id='bbpress-style-css'  href='http://alliance.themerex.net/wp-content/themes/alliance/css/bbpress-style.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='buddypress-style-css'  href='http://alliance.themerex.net/wp-content/themes/alliance/css/buddypress-style.css' type='text/css' media='all' />
 
-	<link rel='stylesheet' id='themerex-skin-style-css'  href='../wp-content/themes/alliance/skins/alliance/skin.css' type='text/css' media='all' />
+	<!-- <link rel='stylesheet' id='themerex-skin-style-css'  href='../wp-content/themes/alliance/skins/alliance/skin.css' type='text/css' media='all' /> -->
+
+	<link rel='stylesheet' id='themerex-skin-style-css'  href="{{ asset('wp-content/themes/alliance/skins/alliance/skin.css') }}" type='text/css' media='all' />
+
+	<link rel='stylesheet' id='themerex-skin-style-css'  href="{{ asset('wp-content/themes/alliance/skins/alliance/skin.css') }}" type='text/css' media='all' />
+
+
+
+
 
 	<link rel='stylesheet' id='themerex-custom-style-css'  href='http://alliance.themerex.net/wp-content/themes/alliance/fw/css/custom-style.min.css' type='text/css' media='all' />
 	<style id='themerex-custom-style-inline-css' type='text/css'>
@@ -279,6 +288,20 @@
 			background-color:#222636
 		}
 
+		.logout{
+			font-family: Lato, sans-serif;
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight: 900;
+			padding: 5px 15px;
+			background: #fff;
+			border-radius: 5px;
+			position: relative;
+			display: block;
+			top: 0;
+			box-shadow: 0px 3px 0px #ededed;
+		}
+
 	</style>
 
 
@@ -353,7 +376,10 @@
 
 					<div class="menu_user_wrap">
 						<div class="logo" style="background-color:  #f4f7f9;">
-							<a href="#""><img src="http://www.hospitaldealvorada.com.br/images/layout/logo.png" alt="Hospital de Alvorada" class="logo_main" ></a>
+							<a href="#"">
+								<img src="http://www.hospitaldealvorada.com.br/images/layout/logo.png" alt="Hospital de Alvorada" class="logo_main" >
+								<!-- <img src='{{ asset("storage/logos/logo2.jpeg") }}' alt="Hospital de Alvorada" class="logo_main" > -->
+							</a>
 						</div>
 						<div class="menu_user_area menu_user_right menu_user_nav_area m_top">  
 							<ul id="menu_user" class="menu_user_nav">
@@ -416,7 +442,7 @@
 							<li class="nav-item dropdown">
 
 								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="{{ route('logout') }}"
+									<a class="logout" href="{{ route('logout') }}"
 									onclick="event.preventDefault();
 									document.getElementById('logout-form').submit();">
 									{{ __('Sair') }}

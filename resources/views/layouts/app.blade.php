@@ -111,7 +111,9 @@
                     <div id="gkHeaderNav" class="gkAbsoluteHeader">                     
                         <h2>
                             <a href="http://www.hospitaldealvorada.com.br/ " id="gkLogo">
-                                <img src="http://www.hospitaldealvorada.com.br/images/layout/logo.png" alt="Hospital de Alvorada" />
+                               <!--  <img src="http://www.hospitaldealvorada.com.br/images/layout/logo.png" alt="Hospital de Alvorada" /> -->
+
+                                <img src='{{ asset("storage/logos/logo3.png") }}' style="width:100%;" alt="Hospital de Alvorada" />
                             </a>
                         </h2>
                     </div>

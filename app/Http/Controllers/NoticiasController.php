@@ -28,8 +28,7 @@ class NoticiasController extends Controller
 	public function lista(){
 
 		$noticias = Noticia::all();
-
-		return view('noticias.painel_noticia_lista', ['noticias' => $noticias]);
+		return view('noticias.painel_noticia_lista', ['noticias' => $noticias ]);
 
 	}
 
@@ -129,6 +128,15 @@ class NoticiasController extends Controller
 
 		return response()->json($result);
 
+	}
+
+	public function show($id)
+	{
+		$noticia = Noticia::find($id);
+		if(!$noticia){
+			abort(404);
+		}
+		return view('noticias.lista_noticia')->with('noticia', $noticia); 
 	}
 
 }

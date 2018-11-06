@@ -14,6 +14,8 @@ Route::post('/painel/noticias/edit/{id}', 'NoticiasController@edit')->name('edit
 Route::post('/painel/noticias/update', 'NoticiasController@update')->name('update');
 Route::post('/painel/noticias/delete/{id}', 'NoticiasController@destroy')->name('delete');
 
+Route::get('/noticias/show/{id}', 'NoticiasController@show')->name('show');
+
 
 
 
