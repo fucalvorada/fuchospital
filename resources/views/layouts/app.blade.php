@@ -19,7 +19,10 @@
     <!-- css hospital -->
     <link href="/index.php/home?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
     <link href="/index.php/home?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
-    <link href="http://www.hospitaldealvorada.com.br/templates/gk_storebox/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <!-- <link href="http://www.hospitaldealvorada.com.br/templates/gk_storebox/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" /> -->
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
     <link href="http://www.hospitaldealvorada.com.br/index.php/component/search/?Itemid=640&amp;format=opensearch" rel="search" title="Buscar Hospital de Alvorada" type="application/opensearchdescription+xml" />
 
     <link rel="stylesheet" href="http://www.hospitaldealvorada.com.br/templates/gk_storebox/css/normalize.css" type="text/css" />
@@ -111,48 +114,48 @@
                     <div id="gkHeaderNav" class="gkAbsoluteHeader">                     
                         <h2>
                             <a href="http://www.hospitaldealvorada.com.br/ " id="gkLogo">
-                               <!--  <img src="http://www.hospitaldealvorada.com.br/images/layout/logo.png" alt="Hospital de Alvorada" /> -->
+                             <!--  <img src="http://www.hospitaldealvorada.com.br/images/layout/logo.png" alt="Hospital de Alvorada" /> -->
 
-                                <img src='{{ asset("storage/logos/logo3.png") }}' style="width:100%;" alt="Hospital de Alvorada" />
-                            </a>
-                        </h2>
-                    </div>
+                             <img src='{{ asset("storage/logos/logo3.png") }}' style="width:100%;" alt="Hospital de Alvorada" />
+                         </a>
+                     </h2>
+                 </div>
 
-                    <div id="single-item">
-                        <div><img src="http://www.hospitaldealvorada.com.br/modules/mod_image_show_gk4/cache/banners.t1gk-is-656.jpg"></div>
-                        <div><img src="http://www.hospitaldealvorada.com.br/modules/mod_image_show_gk4/cache/banners.t2gk-is-656.jpg"></div>
-
-                    </div>
-
-                    <main class="py-4">
-                        @yield('content')
-                    </main>
+                 <div id="single-item">
+                    <div><img src="http://www.hospitaldealvorada.com.br/modules/mod_image_show_gk4/cache/banners.t1gk-is-656.jpg"></div>
+                    <div><img src="http://www.hospitaldealvorada.com.br/modules/mod_image_show_gk4/cache/banners.t2gk-is-656.jpg"></div>
 
                 </div>
-                
-            </section>
 
-        </div>
+                <main class="py-4">
+                    @yield('content')
+                </main>
+
+            </div>
+            
+        </section>
 
     </div>
 
+</div>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript">
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-        $('#single-item').slick({
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript">
 
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            fade: true,
-            cssEase: 'linear',
-            arrows: false
-        });
-    </script>
+    $('#single-item').slick({
+
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        fade: true,
+        cssEase: 'linear',
+        arrows: false
+    });
+</script>
 
 </body>
 </html>

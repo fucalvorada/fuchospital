@@ -3,15 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 
-use App\Noticia;
-
-class NoticiasController extends Controller
+use App\Evento;
+class EventosController extends Controller
 {
-
-
 	public function __construct()
 	{
 		$this->middleware('auth');
@@ -19,18 +15,18 @@ class NoticiasController extends Controller
 	
 	public function index(){
 
-		$noticias = Noticia::all();
+		$eventos = Evento::all();
 
-		return view('noticias.painel_noticia', ['noticias' => $noticias]);
-
+		return view('eventos.painel_eventos', ['eventos' => $eventos]);
 	}
 
 	public function lista(){
 
-		$noticias = Noticia::all();
-		return view('noticias.painel_noticia_lista', ['noticias' => $noticias ]);
+		$eventos = Evento::all();
+		return view('eventos.painel_evento_lista', ['eventos' => $eventos ]);
 
 	}
+
 
 	public function cadastrar(Request $request){
 
@@ -40,14 +36,14 @@ class NoticiasController extends Controller
 			'image_notice'	=> 'required',
 			]);
 
-		$noticia = new Noticia;
-		$noticia->title = $request->title_notice;
-		$noticia->body 	= $request->editor_noticia;
+		$eventos = new Evento;
+		$eventos->title = $request->title_notice;
+		$eventos->body 	= $request->editor_noticia;
 
 		//faz upload na pasta storage/public/noticia
-		$noticia->image  = $this->upload($request);
+		$eventos->image  = $this->upload($request);
 		
-		if( $noticia->save() ){
+		if( $eventos->save() ){
 			return redirect()->back()->with('message', 'sucesso!'); 
 		}else{
 			return redirect()->back()->with('message', 'erro!'); 
@@ -72,7 +68,7 @@ class NoticiasController extends Controller
 			$nameFile = "{$name}.{$extension}";
 
         	// Faz o upload:
-			$upload = $request->image_notice->storeAs('noticia', $nameFile);
+			$upload = $request->image_notice->storeAs('evento', $nameFile);
         	// Se tiver funcionado o arquivo foi armazenado em storage/app/public/noticia/nomedinamicoarquivo.extensao
 
         	// Verifica se NÃO deu certo o upload (Redireciona de volta)
@@ -84,15 +80,16 @@ class NoticiasController extends Controller
 		}
 	}
 
+
 	public function edit($id)
 	{
 
-		$noticia = Noticia::find($id);
-		if(!$noticia){
+		$eventos = Evento::find($id);
+		if(!$eventos){
 			abort(404);
 		}
 
-		return response()->json($noticia);
+		return response()->json($eventos);
 	}
 
 	public function update(Request $request)
@@ -103,11 +100,11 @@ class NoticiasController extends Controller
 			'editor_noticia' => 'required',
 			]);
 
-		$noticia = Noticia::find($request->id_notice);
-		$noticia->title = $request->title_notice;
-		$noticia->body 	= $request->editor_noticia;
+		$eventos = Evento::find($request->id_notice);
+		$eventos->title = $request->title_notice;
+		$eventos->body 	= $request->editor_noticia;
 
-		if( $noticia->save() ){
+		if( $eventos->save() ){
 			return redirect()->back()->with('message', 'Editado com sucesso!'); 
 		}else{
 			return redirect()->back()->with('message', 'Não foi possível editar!'); 
@@ -115,12 +112,13 @@ class NoticiasController extends Controller
 		
 	}
 
+
 	public function destroy($id)
 	{
 
-		$noticia = Noticia::find($id);
+		$evento = Evento::find($id);
 
-		if( $noticia->delete() ){
+		if( $evento->delete() ){
 			$result = 1;
 		}else{
 			$result = 0;
@@ -132,11 +130,10 @@ class NoticiasController extends Controller
 
 	public function show($id)
 	{
-		$noticia = Noticia::find($id);
-		if(!$noticia){
+		$evento = Evento::find($id);
+		if(!$evento){
 			abort(404);
 		}
-		return view('noticias.lista_noticia')->with('noticia', $noticia); 
+		return view('eventos.lista_evento')->with('evento', $evento); 
 	}
-
 }

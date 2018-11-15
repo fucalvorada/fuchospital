@@ -5,7 +5,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="http://www.hospitaldealvorada.com.br/templates/gk_storebox/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<!-- <link href="http://www.hospitaldealvorada.com.br/templates/gk_storebox/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" /> -->
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
 	<title> FUC Hospital de Alvorada</title>
 	<style type="text/css" media="screen">#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover,body #booked-profile-page input[type=submit].button-primary:hover,body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover,body table.booked-calendar input[type=submit].button-primary:hover,body .booked-modal input[type=submit].button-primary:hover,body table.booked-calendar th,body table.booked-calendar thead,body table.booked-calendar thead th,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,body #booked-profile-page .booked-profile-header,body #booked-profile-page .booked-tabs li.active a,body #booked-profile-page .booked-tabs li.active a:hover,body #booked-profile-page .appt-block .google-cal-button > a:hover,#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header{ background:red !important; }body #booked-profile-page input[type=submit].button-primary:hover,body table.booked-calendar input[type=submit].button-primary:hover,body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover,body .booked-modal input[type=submit].button-primary:hover,body table.booked-calendar th,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,body #booked-profile-page .booked-profile-header,body #booked-profile-page .appt-block .google-cal-button > a:hover{ border-color:red!important; }body table.booked-calendar tr.days,body table.booked-calendar tr.days th,body .booked-calendarSwitcher.calendar,body #booked-profile-page .booked-tabs,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead th{ background:#2a2f43 !important; }body table.booked-calendar tr.days th,body #booked-profile-page .booked-tabs{ border-color:#2a2f43 !important; }#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a:hover,body #booked-profile-page input[type=submit].button-primary,body table.booked-calendar input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-modal input[type=submit].button-primary,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button,body #booked-profile-page .booked-profile-appt-list .appt-block.approved .status-block,body #booked-profile-page .appt-block .google-cal-button > a,body .booked-modal p.booked-title-bar,body table.booked-calendar td:hover .date span,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover,.booked-ms-modal .booked-book-appt /* Multi-Slot Booking */{ background:#2a2f43; }body #booked-profile-page input[type=submit].button-primary,body table.booked-calendar input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-modal input[type=submit].button-primary,body #booked-profile-page .appt-block .google-cal-button > a,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover{ border-color:#2a2f43; }body .booked-modal .bm-window p i.fa,body .booked-modal .bm-window a,body .booked-appt-list .booked-public-appointment-title,body .booked-modal .bm-window p.appointment-title,.booked-ms-modal.visible:hover .booked-book-appt{ color:#2a2f43; }.booked-appt-list .timeslot.has-title .booked-public-appointment-title { color:inherit; }</style><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><link rel='dns-prefetch' href='//fonts.googleapis.com' />
 	<link rel='dns-prefetch' href='//s.w.org' />
@@ -490,7 +493,7 @@
 						</li>
 						<li id="menu-item-1951" class="icon-9 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1951"><a>Avisos</a>
 							<ul class="sub-menu">
-								<li id="menu-item-1954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1954"><a href="">Ver Avisos</a></li>
+								<li id="menu-item-1954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1954"><a href="{{ route('lista_aviso') }}">Ver Avisos</a></li>
 								<li id="menu-item-1953" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1953"><a href="{{ route('aviso') }}">Painel</a></li>
 							</ul>
 						</li>
@@ -514,10 +517,10 @@
 							<a>Eventos</a>
 							<ul class="sub-menu">
 								<li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590">
-									<a href="">Ver Eventos</a>
+									<a href="{{ route('lista_evento') }}">Ver Eventos</a>
 								</li>
 								<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730">
-									<a href="">Painel</a>
+									<a href="{{ route('evento') }}">Painel</a>
 								</li>
 							</ul>
 						</li>
@@ -542,6 +545,10 @@
 									<a href="">Painel</a>
 								</li>
 							</ul>
+						</li>
+
+						<li id="menu-item-1093" class="icon-10 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1093">
+							<a href="http://labac.cardiologia.org.br/hlisweb/inicio.asp" target="_blank"> Exames</a>
 						</li>
 
 					</ul>

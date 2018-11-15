@@ -13,6 +13,18 @@
 
 		$('#example').DataTable({
 			"entriesSearch":false,
+			"lengthChange":false,
+			"info":false,
+			"dom": 'Bfrtip',
+			"paginate":true,
+			"oLanguage": {
+
+				"sInfo": "_START_ - _END_ /_TOTAL_",
+				"sInfoEmpty": "Tabela vazia",
+				"sSearch" : "Pesquisar",
+				"sInfoFiltered" : ""
+
+			},
 			"columnDefs": [
 			{
 				"targets": [ 2 ],
@@ -68,7 +80,7 @@
 
 			type: "POST",
 			data: id,
-			url: "/painel/noticias/delete/"+id,
+			url: "/painel/avisos/delete/"+id,
 			headers: {
 				'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
 			},
@@ -93,7 +105,7 @@
 
 			type: "POST",
 			data: id,
-			url: "/painel/noticias/edit/"+id,
+			url: "/painel/avisos/edit/"+id,
 			headers: {
 				'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
 			},
@@ -214,7 +226,7 @@
 		</button>
 	</div>
 	<div class="modal-body">
-		<form method="post"  class="form_painel_notice" action="{{ route('cadastrar') }}" enctype="multipart/form-data">
+		<form method="post"  class="form_painel_notice" action="{{ route('cadastrar_aviso') }}" enctype="multipart/form-data">
 
 			@csrf
 			<div>
@@ -247,7 +259,7 @@
 		</button>
 	</div>
 	<div class="modal-body">
-		<form method="post"  class="form_painel_notice" action="{{ route('update') }}" enctype="multipart/form-data">
+		<form method="post"  class="form_painel_notice" action="{{ route('update_aviso') }}" enctype="multipart/form-data">
 
 			@csrf
 			<div>

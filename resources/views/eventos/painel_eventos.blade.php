@@ -82,7 +82,7 @@
 
 			type: "POST",
 			data: id,
-			url: "/painel/noticias/delete/"+id,
+			url: "/painel/eventos/delete/"+id,
 			headers: {
 				'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
 			},
@@ -107,7 +107,7 @@
 
 			type: "POST",
 			data: id,
-			url: "/painel/noticias/edit/"+id,
+			url: "/painel/eventos/edit/"+id,
 			headers: {
 				'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
 			},
@@ -175,13 +175,13 @@
 					<tr>
 						<td>Cod</td>
 						<td>Titulo</td>
-						<td>Notícia</td>
+						<td>Evento</td>
 						<td>Ações</td>
 					</tr>
 				</thead>
 				<tbody>
 
-					@foreach($noticias as $not)
+					@foreach($eventos as $not)
 
 					<tr>
 						<td class="categories">
@@ -220,7 +220,7 @@
 @section('modal')
 <div class="modal-content">
 	<div class="modal-header">
-		<h5 class="" id="">Cadastrar Notícia</h5>
+		<h5 class="" id="">Cadastrar Evento</h5>
 	</div>
 	<div style="float: right;">
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -228,7 +228,7 @@
 		</button>
 	</div>
 	<div class="modal-body">
-		<form method="post"  class="form_painel_notice" action="{{ route('cadastrar') }}" enctype="multipart/form-data">
+		<form method="post"  class="form_painel_notice" action="{{ route('cadastrar_evento') }}" enctype="multipart/form-data">
 
 			@csrf
 			<div>
@@ -258,7 +258,7 @@
 @section('modalEdit')
 <div class="modal-content">
 	<div class="modal-header">
-		<h5 class="" id="">Editar Notícia</h5>
+		<h5 class="" id="">Editar Evento</h5>
 	</div>
 	<div style="float: right;">
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -266,7 +266,7 @@
 		</button>
 	</div>
 	<div class="modal-body">
-		<form method="post"  class="form_painel_notice" action="{{ route('update') }}" enctype="multipart/form-data">
+		<form method="post"  class="form_painel_notice" action="{{ route('update_evento') }}" enctype="multipart/form-data">
 
 			@csrf
 			<div>
