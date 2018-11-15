@@ -376,7 +376,7 @@
 
 					<div class="menu_user_wrap">
 						<div class="logo" style="background-color:  #f4f7f9;">
-							<a href="#"">
+							<a href="{{ route('home') }}">
 								<img src="http://www.hospitaldealvorada.com.br/images/layout/logo.png" alt="Hospital de Alvorada" class="logo_main" >
 								<!-- <img src='{{ asset("storage/logos/logo2.jpeg") }}' alt="Hospital de Alvorada" class="logo_main" > -->
 							</a>
@@ -455,7 +455,7 @@
 						</li>
 
 					</ul>
-					<div class="search_wrap search_style_regular search_ajax" title="Open/close search form">
+			<!-- 		<div class="search_wrap search_style_regular search_ajax" title="Open/close search form">
 						<a href="#" class="search_icon "></a>
 						<div class="search_form_wrap">
 							<form role="search" method="get" class="search_form" action="http://alliance.themerex.net/">
@@ -464,7 +464,8 @@
 							</form>
 						</div>
 						<div class="search_results widget_area bg_tint_light"><a class="search_results_close ncel"></a><div class="search_results_content"></div></div>
-					</div>														<div class="menu_button show_menu">Show Menu</div>
+					</div> -->
+					<div class="menu_button show_menu">Mostrar Menu</div>
 				</div>
 			</div> 
 		</header>
@@ -473,49 +474,80 @@
 		<aside class="menu_main_wrap">
 			<nav role="navigation" class="menu_main_nav_area">
 				<ul id="menu_main" class="menu_main_nav">
-					<li id="menu-item-804" class="icon-4 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-804"><a>Notícias</a>
-						<ul class="sub-menu">
-							<li id="menu-item-857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-857">
-								<a href="/noticias/lista">Ver todas</a>
-							</li>
+					<li id="menu-item-282" class="icon-11 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-282">
+						<a href="{{ route('home') }}">Home</a>
 
-							<li id="menu-item-990" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-990">
-								<a href="/painel/noticias">Painel</a>
-							</li>
-						</ul>
-					</li>
-					<li id="menu-item-1951" class="icon-22 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1951"><a>Avisos</a>
-						<ul class="sub-menu">
-							<li id="menu-item-1954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1954"><a href="http://alliance.themerex.net/color-scheme-1/">Color Scheme 1</a></li>
-							<li id="menu-item-1953" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1953"><a href="http://alliance.themerex.net/color-scheme-2/">Color Scheme 2</a></li>
-							<li id="menu-item-1952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1952"><a href="http://alliance.themerex.net/color-scheme-3/">Color Scheme 3</a></li>
-						</ul>
-					</li>
-					<li id="menu-item-805" class="icon-5 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-805"><a>Documentos</a>
-						<ul class="sub-menu">
-							<li id="menu-item-618" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-618"><a href="http://alliance.themerex.net/ceo/">CEO</a></li>
-							<li id="menu-item-442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-442"><a href="http://alliance.themerex.net/team-leaders/">Team Leaders</a></li>
-							<li id="menu-item-357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357"><a href="http://alliance.themerex.net/department-page/">Department</a></li>
-						</ul>
-					</li>
-					<li id="menu-item-282" class="icon-7 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-282"><a href="http://alliance.themerex.net/category/post-formats/">Grupos</a></li>
-					<li id="menu-item-806" class="icon-17 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-806"><a>Eventos</a>
-						<ul class="sub-menu">
-							<li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590"><a href="http://alliance.themerex.net/trainings/">Trainings</a></li>
-							<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730"><a href="http://alliance.themerex.net/tests-and-quizzes/">Tests and Quizzes</a></li>
-							<li id="menu-item-935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-935"><a href="http://alliance.themerex.net/tutorials/">Tutorials</a></li>
-						</ul>
-					</li>
-					<li id="menu-item-1093" class="icon-8 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1093"><a>Suporte TI</a>
-						<ul class="sub-menu">
-							<li id="menu-item-1094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1094"><a href="http://alliance.themerex.net/vacancies/">Vacancies</a></li>
-							<li id="menu-item-1113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1113"><a href="http://alliance.themerex.net/resume-examples/">Resumes</a></li>
-						</ul>
-					</li>
+						<li id="menu-item-804" class="icon-16 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-804"><a>Notícias</a>
+							<ul class="sub-menu">
+								<li id="menu-item-857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-857">
+									<a href="/noticias/lista">Todas Notícias</a>
+								</li>
 
-				</ul>
-			</li>
-		</ul>				</nav>
+								<li id="menu-item-990" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-990">
+									<a href="/painel/noticias">Painel</a>
+								</li>
+							</ul>
+						</li>
+						<li id="menu-item-1951" class="icon-9 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1951"><a>Avisos</a>
+							<ul class="sub-menu">
+								<li id="menu-item-1954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1954"><a href="">Ver Avisos</a></li>
+								<li id="menu-item-1953" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1953"><a href="{{ route('aviso') }}">Painel</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-805" class="icon-13 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-805"><a>Documentos</a>
+							<ul class="sub-menu">
+								<li id="menu-item-618" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-618"><a href="">Ver Arquivos</a></li>
+								<li id="menu-item-442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-442"><a href="">Painel</a></li>
+							</ul>
+						</li>
+
+						<li id="menu-item-282" class="icon-20 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-282">
+							<a>Aniversariantes</a>
+							<ul class="sub-menu">
+								<li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590"><a href="">Ver Calendário</a></li>
+								<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730"><a href="">Painel</a></li>
+							</ul>
+						</li>
+
+
+						<li id="menu-item-806" class="icon-15 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-806">
+							<a>Eventos</a>
+							<ul class="sub-menu">
+								<li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590">
+									<a href="">Ver Eventos</a>
+								</li>
+								<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730">
+									<a href="">Painel</a>
+								</li>
+							</ul>
+						</li>
+
+						<li id="menu-item-806" class="icon-2 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-806">
+							<a>Cardápio</a>
+							<ul class="sub-menu">
+								<li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590">
+									<a href="">Ver Cardápio</a>
+								</li>
+								<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730">
+									<a href="">Painel</a>
+								</li>
+							</ul>
+						</li>
+						<li id="menu-item-1093" class="icon-8 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1093"><a>Suporte TI</a>
+							<ul class="sub-menu">
+								<li id="menu-item-1094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1094">
+									<a href="">Abrir Chamado</a>
+								</li>
+								<li id="menu-item-1113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1113">
+									<a href="">Painel</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+				</li>
+			</ul>
+		</nav>
 	</aside>
 
 	<div class="page_content_wrap"  >
@@ -534,19 +566,19 @@
 
 				<div class="grid-sizer"></div><div class="gutter-sizer"></div>
 
-				<aside id="themerex_widget_calendar-2" class="widget_number_6 widget widget_calendar">
-					
-					<h5 class="widget_title"></h5>
-					<table id="wp-calendar-591983960" class="wp-calendar">
-						<thead>
-							<tr>
-								<th class="month_prev">
-									<a href="#" data-type="post" data-year="2015" data-month="07" title="View posts for July 2015"></a></th>
-									<th class="month_cur" colspan="5">October </th>
-									<th class="month_next">&nbsp;</th>
-								</tr><tr>
-								<th class="weekday" scope="col" title="Monday">M</th><th class="weekday" scope="col" title="Tuesday">T</th><th class="weekday" scope="col" title="Wednesday">W</th><th class="weekday" scope="col" title="Thursday">T</th><th class="weekday" scope="col" title="Friday">F</th><th class="weekday" scope="col" title="Saturday">S</th><th class="weekday" scope="col" title="Sunday">S</th></tr></thead><tbody><tr><td class="day"><span class="day_wrap">1</span></td><td class="day"><span class="day_wrap">2</span></td><td class="day"><span class="day_wrap">3</span></td><td class="day"><span class="day_wrap">4</span></td><td class="day"><span class="day_wrap">5</span></td><td class="day"><span class="day_wrap">6</span></td><td class="day"><span class="day_wrap">7</span></td></tr><tr><td class="day"><span class="day_wrap">8</span></td><td class="day"><span class="day_wrap">9</span></td><td class="day"><span class="day_wrap">10</span></td><td class="day"><span class="day_wrap">11</span></td><td class="day"><span class="day_wrap">12</span></td><td class="day"><span class="day_wrap">13</span></td><td class="day"><span class="day_wrap">14</span></td></tr><tr><td class="day"><span class="day_wrap">15</span></td><td class="day"><span class="day_wrap">16</span></td><td class="today"><span class="day_wrap">17</span></td><td class="day"><span class="day_wrap">18</span></td><td class="day"><span class="day_wrap">19</span></td><td class="day"><span class="day_wrap">20</span></td><td class="day"><span class="day_wrap">21</span></td></tr><tr><td class="day"><span class="day_wrap">22</span></td><td class="day"><span class="day_wrap">23</span></td><td class="day"><span class="day_wrap">24</span></td><td class="day"><span class="day_wrap">25</span></td><td class="day"><span class="day_wrap">26</span></td><td class="day"><span class="day_wrap">27</span></td><td class="day"><span class="day_wrap">28</span></td></tr><tr><td class="day"><span class="day_wrap">29</span></td><td class="day"><span class="day_wrap">30</span></td><td class="day"><span class="day_wrap">31</span></td><td class="pad" colspan="4"><span class="day_wrap">&nbsp;</span></td></tr></tbody></table>
-							</aside>
+			<!-- <aside id="themerex_widget_calendar-2" class="widget_number_6 widget widget_calendar">
+
+				<h5 class="widget_title"></h5>
+				<table id="wp-calendar-591983960" class="wp-calendar">
+					<thead>
+						<tr>
+							<th class="month_prev">
+								<a href="#" data-type="post" data-year="2015" data-month="07" title="View posts for July 2015"></a></th>
+								<th class="month_cur" colspan="5">October </th>
+								<th class="month_next">&nbsp;</th>
+							</tr><tr>
+							<th class="weekday" scope="col" title="Monday">M</th><th class="weekday" scope="col" title="Tuesday">T</th><th class="weekday" scope="col" title="Wednesday">W</th><th class="weekday" scope="col" title="Thursday">T</th><th class="weekday" scope="col" title="Friday">F</th><th class="weekday" scope="col" title="Saturday">S</th><th class="weekday" scope="col" title="Sunday">S</th></tr></thead><tbody><tr><td class="day"><span class="day_wrap">1</span></td><td class="day"><span class="day_wrap">2</span></td><td class="day"><span class="day_wrap">3</span></td><td class="day"><span class="day_wrap">4</span></td><td class="day"><span class="day_wrap">5</span></td><td class="day"><span class="day_wrap">6</span></td><td class="day"><span class="day_wrap">7</span></td></tr><tr><td class="day"><span class="day_wrap">8</span></td><td class="day"><span class="day_wrap">9</span></td><td class="day"><span class="day_wrap">10</span></td><td class="day"><span class="day_wrap">11</span></td><td class="day"><span class="day_wrap">12</span></td><td class="day"><span class="day_wrap">13</span></td><td class="day"><span class="day_wrap">14</span></td></tr><tr><td class="day"><span class="day_wrap">15</span></td><td class="day"><span class="day_wrap">16</span></td><td class="today"><span class="day_wrap">17</span></td><td class="day"><span class="day_wrap">18</span></td><td class="day"><span class="day_wrap">19</span></td><td class="day"><span class="day_wrap">20</span></td><td class="day"><span class="day_wrap">21</span></td></tr><tr><td class="day"><span class="day_wrap">22</span></td><td class="day"><span class="day_wrap">23</span></td><td class="day"><span class="day_wrap">24</span></td><td class="day"><span class="day_wrap">25</span></td><td class="day"><span class="day_wrap">26</span></td><td class="day"><span class="day_wrap">27</span></td><td class="day"><span class="day_wrap">28</span></td></tr><tr><td class="day"><span class="day_wrap">29</span></td><td class="day"><span class="day_wrap">30</span></td><td class="day"><span class="day_wrap">31</span></td><td class="pad" colspan="4"><span class="day_wrap">&nbsp;</span></td></tr></tbody></table>
+						</aside> -->
 
 
 
@@ -555,12 +587,20 @@
 
 
 
-	<aside id="archives-3" class="widget_number_5 widget widget_archive"><h5 class="widget_title">Archives</h5>		<ul>
-		<li><a href='http://alliance.themerex.net/2015/07/'>July 2015</a></li>
-		<li><a href='http://alliance.themerex.net/2015/06/'>June 2015</a></li>
-		<li><a href='http://alliance.themerex.net/2015/05/'>May 2015</a></li>
-		<li><a href='http://alliance.themerex.net/2015/04/'>April 2015</a></li>
-		<li><a href='http://alliance.themerex.net/2015/03/'>March 2015</a></li>
+	<aside id="archives-3" class="widget_number_5 widget widget_archive"><h5 class="widget_title">Arquivos</h5>		<ul>
+		<li><a href=''>Janeiro</a></li>
+		<li><a href=''>Fevereiro</a></li>
+		<li><a href=''>Março</a></li>
+		<li><a href=''>Abril</a></li>
+		<li><a href=''>Maio</a></li>
+		<li><a href=''>Junho</a></li>
+		<li><a href=''>Julho</a></li>
+		<li><a href=''>Agosto</a></li>
+		<li><a href=''>Setembro</a></li>
+		<li><a href=''>Outubro</a></li>
+		<li><a href=''>Novembro</a></li>
+		<li><a href=''>Dezembro</a></li>
+
 	</ul>
 </aside>
 
