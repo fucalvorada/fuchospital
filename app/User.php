@@ -32,6 +32,6 @@ class User extends Authenticatable
     static public function findDataNasci( $date) {
 
         return \DB::table('users')->whereMonth('nascimento', $date)
-        ->get();
+        ->orderBy('nascimento')->get();
     }
 }

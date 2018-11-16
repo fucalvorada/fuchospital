@@ -19,7 +19,7 @@ class AniverController extends Controller
 
 	public function lista($data =  null){
 
-		$user = User::all();
+		$user = User::orderBy('nascimento', 'ASC')->get();
 
 		if($data != 0){
 

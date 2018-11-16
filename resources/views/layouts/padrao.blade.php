@@ -606,7 +606,7 @@
 									<a href="">Ver Cardápio</a>
 								</li>
 								<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730">
-									<a href="">Painel</a>
+									<a href="{{ route('cardapio') }}">Painel</a>
 								</li>
 							</ul>
 						</li>

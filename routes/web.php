@@ -37,6 +37,17 @@ Route::post('/painel/eventos/delete/{id}', 'EventosController@destroy')->name('d
 Route::get('/aniver/lista/{data}', 'AniverController@lista')->name('aniver');
 
 
+// Cardapio
+Route::get('/painel/cardapio', 'CardapiosController@index')->name('cardapio');
+Route::get('/painel/cardapio/cadastrar', 'CardapiosController@index')->name('cadastrar_cardapio');
+Route::get('/painel/cardapio/update', 'CardapiosController@index')->name('update_cardapio');
+
+
+
+
+
+
+
 
 
 
