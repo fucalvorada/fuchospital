@@ -29,7 +29,7 @@
 		<div class="post_descr">
 
 			<p>{{ \Illuminate\Support\Str::words($not->body, 10, "...")}}</p>
-			<a href="{{ route('show', $not->id  ) }}" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_medium read_more" style="color:#fff;background-color:#67d3e0; box-shadow: 0 3px rgb(73,181,194) ;">LEIA MAIS</a>
+			<a href="{{ route('show_noticia', $not->id  ) }}" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_link sc_button_size_medium read_more" style="color:#fff;background-color:#67d3e0; box-shadow: 0 3px rgb(73,181,194) ;">LEIA MAIS</a>
 		</div>
 	</div>
 </article>
