@@ -4,7 +4,8 @@
 <article class="post_item post_item_attachment template_attachment post-497 attachment type-attachment status-inherit hentry">
 
     <h1 class="post_title" style='text-transform: uppercase;'>
-        <span class="post_icon icon-book-2"></span>BEM VINDO, {{ Auth::user()->name }}
+        <span class="post_icon icon-book-2"></span>BEM VINDO,
+        <P>{{ Auth::user()->name }}</P>
     </h1>
 
     <div class="post_featured">

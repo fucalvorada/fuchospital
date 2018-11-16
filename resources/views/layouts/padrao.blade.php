@@ -181,11 +181,82 @@
 		h6 a,.h6 a{
 			color:#2a2f43
 		}
-		.sc_accordion.sc_accordion_style_1 .sc_accordion_item .sc_accordion_title:hover,.sc_tabs.sc_tabs_style_1 .sc_tabs_titles li a:hover,.sc_tooltip_parent,.page_top_wrap.page_top_title .breadcrumbs,.widget_area ul li:before,.widget_area ul li .count,.widget_area ul li.recentcomments span.comment-author-link a,.widget_area .widget_product_tag_cloud a:hover,.widget_area .widget_tag_cloud a:hover,.post_info.post_info_bottom .post_info_item,.widget_area ul li.recentcomments .comment-author-link,blockquote.sc_quote.sc_quote_style_2 .sc_quote_title,.sc_blogger.template_masonry .post_content.isotope_item_content .post_title a:hover,.sc_blogger.template_masonry .post_content.isotope_item_content .post_date,.sc_blogger.template_masonry .post_format_link .post_featured .content a:hover,.sc_blogger.template_classic .post_content.isotope_item_content .post_title a:hover,.sc_blogger.template_classic .post_content.isotope_item_content .post_date,.sc_blogger.template_classic .post_format_link .post_featured .content a:hover,.isotope_filters a.active,.isotope_filters a:hover,.menu_main_wrap .menu_main_nav li>a:hover,.menu_main_wrap .menu_main_nav li>a:hover:after,.sc_blogger.layout_news .post_date,.widget_area ul li a:hover,.widget_area .post_title a:hover,.sc_table.recent_jobs td a:hover,.sc_list.sc_list_style_ul li:before,li.bbp-topic-title a:hover,.widget_area .widget_display_replies ul li a,.widget_area .widget_display_replies a.bbp-reply-topic-title:hover,.search_wrap.search_style_regular .search_icon,.menu_user_wrap .menu_user_nav li li>a:hover,.popup_wrap .popup_close:hover,.pagination_wrap .pager_next,.pagination_wrap .pager_prev,.pagination_wrap .pager_last,.pagination_wrap .pager_first,.pagination_single>.pager_numbers,.pagination_slider .pager_cur:hover,.pagination_slider .pager_cur:focus,.pagination_pages>.active,.pagination_pages>a.pager_dot,.pagination_wrap .pager_next:hover,.pagination_wrap .pager_prev:hover,.pagination_wrap .pager_last:hover,.pagination_wrap .pager_first:hover,.menu_main_wrap .menu_main_nav>li.open>a,.menu_main_wrap .menu_main_nav>li.open>a:after,#buddypress div.item-list-tabs ul li a:hover,#booking_month_nav_prev .booking_month_nav_button:hover:before,#booking_month_nav_next .booking_month_nav_button:hover:before,#booking_slot_form div.booking_float_left.booking_height_20.booking_line_20 a:hover,#booking_slot_form div.booking_font_custom.booking_float_right.text_right:hover,.close_booking:hover,.widget_area .widget_text a,.widget_area .post_info a,a:hover,.copyright_wrap a,.widget_area .widget_calendar td a.day_wrap,.page_top_wrap .breadcrumbs a.breadcrumbs_item,a,.comments_list_wrap .comment_info>.comment_date>.comment_date_value,.comments_list_wrap .comment_info>.comment_time,.isotope_item_courses .post_featured .post_title a:hover{
-			color:#b2221f
+		.sc_accordion.sc_accordion_style_1 .sc_accordion_item .sc_accordion_title:hover,
+		.sc_tabs.sc_tabs_style_1 .sc_tabs_titles li a:hover,
+		.sc_tooltip_parent,
+		.page_top_wrap.page_top_title .breadcrumbs,
+		.widget_area ul li:before,
+		.widget_area ul li .count,
+		.widget_area ul li.recentcomments span.comment-author-link a,
+		.widget_area .widget_product_tag_cloud a:hover,
+		.widget_area .widget_tag_cloud a:hover,
+		.post_info.post_info_bottom .post_info_item,
+		.widget_area ul li.recentcomments .comment-author-link,
+		blockquote.sc_quote.sc_quote_style_2 .sc_quote_title,
+		.sc_blogger.template_masonry .post_content.isotope_item_content .post_title a:hover,
+		.sc_blogger.template_masonry .post_content.isotope_item_content .post_date,
+		.sc_blogger.template_masonry .post_format_link .post_featured .content a:hover,
+		.sc_blogger.template_classic .post_content.isotope_item_content .post_title a:hover,
+		.sc_blogger.template_classic .post_content.isotope_item_content .post_date,
+		.sc_blogger.template_classic .post_format_link .post_featured .content a:hover,
+		.isotope_filters a.active,
+		.isotope_filters a:hover,
+		.menu_main_wrap .menu_main_nav li>a:hover,
+		.menu_main_wrap .menu_main_nav li>a:hover:after,
+		.sc_blogger.layout_news .post_date,
+		.widget_area ul li a:hover,
+		.widget_area .post_title a:hover,
+		.sc_table.recent_jobs td a:hover,
+		.sc_list.sc_list_style_ul li:before,
+		li.bbp-topic-title a:hover,
+		.widget_area .widget_display_replies ul li a,
+		.widget_area .widget_display_replies a.bbp-reply-topic-title:hover,
+		.search_wrap.search_style_regular .search_icon,
+		.menu_user_wrap .menu_user_nav li li>a:hover,
+		.popup_wrap .popup_close:hover,
+		.pagination_wrap .pager_next,
+		.pagination_wrap .pager_prev,
+		.pagination_wrap .pager_last,
+		.pagination_wrap .pager_first,
+		.pagination_single>.pager_numbers,
+		.pagination_slider .pager_cur:hover,
+		.pagination_slider .pager_cur:focus,
+		.pagination_pages>.active,
+		.pagination_pages>a.pager_dot,
+		.pagination_wrap .pager_next:hover,
+		.pagination_wrap .pager_prev:hover,
+		.pagination_wrap .pager_last:hover,
+		.pagination_wrap .pager_first:hover,
+		.menu_main_wrap .menu_main_nav>li.open>a,
+		.menu_main_wrap .menu_main_nav>li.open>a:after,
+		#buddypress div.item-list-tabs ul li a:hover,
+		#booking_month_nav_prev .booking_month_nav_button:hover:before,
+		#booking_month_nav_next .booking_month_nav_button:hover:before,
+		#booking_slot_form div.booking_float_left.booking_height_20.booking_line_20 a:hover,
+		#booking_slot_form div.booking_font_custom.booking_float_right.text_right:hover,
+		.close_booking:hover,
+		.widget_area .widget_text a,
+		.widget_area .post_info a,
+		a:hover,
+		.copyright_wrap a,
+		.widget_area .widget_calendar td a.day_wrap,
+		.page_top_wrap .breadcrumbs a.breadcrumbs_item,
+		a,
+		.comments_list_wrap .comment_info>.comment_date>.comment_date_value,
+		.comments_list_wrap .comment_info>.comment_time,
+		.isotope_item_courses .post_featured .post_title a:hover {
+			color: #b2221f
 		}
 		.menu_user_wrap .menu_user_nav li li>a:hover{
 			color:#b2221f !important
+		}
+
+		.menu_user_wrap .logo{
+			height: 101px !important;
+		}
+
+		.top_panel_wrap{
+			height: 100px !important;
 		}
 
 		.menu_main_wrap .menu_main_nav > li:before {
@@ -285,7 +356,8 @@
 			background-color:#222636
 		}
 		.menu_main_wrap{
-			border-color:#222636
+			border-color:#222636;
+			margin-top: 30px;
 		}
 		.menu_main_wrap .menu_main_nav>li ul::-webkit-scrollbar-thumb{
 			background-color:#222636
@@ -380,8 +452,10 @@
 					<div class="menu_user_wrap">
 						<div class="logo" style="background-color:  #f4f7f9;">
 							<a href="{{ route('home') }}">
-								<img src="http://www.hospitaldealvorada.com.br/images/layout/logo.png" alt="Hospital de Alvorada" class="logo_main" >
+								<!-- <img src="http://www.hospitaldealvorada.com.br/images/layout/logo.png" alt="Hospital de Alvorada" class="logo_main" > -->
 								<!-- <img src='{{ asset("storage/logos/logo2.jpeg") }}' alt="Hospital de Alvorada" class="logo_main" > -->
+
+								<img src='{{ asset("storage/logos/logo4.png") }}' alt="Hospital de Alvorada" class="logo_main" >
 							</a>
 						</div>
 						<div class="menu_user_area menu_user_right menu_user_nav_area m_top">  
@@ -507,7 +581,7 @@
 						<li id="menu-item-282" class="icon-20 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-282">
 							<a>Aniversariantes</a>
 							<ul class="sub-menu">
-								<li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590"><a href="">Ver Calendário</a></li>
+								<li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590"><a href="{{ route('aniver', 0) }}">Ver Calendário</a></li>
 								<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730"><a href="">Painel</a></li>
 							</ul>
 						</li>
@@ -594,22 +668,23 @@
 
 
 
-	<aside id="archives-3" class="widget_number_5 widget widget_archive"><h5 class="widget_title">Arquivos</h5>		<ul>
-		<li><a href=''>Janeiro</a></li>
-		<li><a href=''>Fevereiro</a></li>
-		<li><a href=''>Março</a></li>
-		<li><a href=''>Abril</a></li>
-		<li><a href=''>Maio</a></li>
-		<li><a href=''>Junho</a></li>
-		<li><a href=''>Julho</a></li>
-		<li><a href=''>Agosto</a></li>
-		<li><a href=''>Setembro</a></li>
-		<li><a href=''>Outubro</a></li>
-		<li><a href=''>Novembro</a></li>
-		<li><a href=''>Dezembro</a></li>
+	<aside id="archives-3" class="widget_number_5 widget widget_archive"><h5 class="widget_title">Aniversariantes</h5>		
+		<ul>
+			<li><a href="{{ route('aniver', 1) }}">Janeiro</a></li>
+			<li><a href="{{ route('aniver', 2) }}">Fevereiro</a></li>
+			<li><a href="{{ route('aniver', 3) }}">Março</a></li>
+			<li><a href="{{ route('aniver', 4) }}">Abril</a></li>
+			<li><a href="{{ route('aniver', 5) }}">Maio</a></li>
+			<li><a href="{{ route('aniver', 6) }}">Junho</a></li>
+			<li><a href="{{ route('aniver', 7) }}">Julho</a></li>
+			<li><a href="{{ route('aniver', 8) }}">Agosto</a></li>
+			<li><a href="{{ route('aniver', 9) }}">Setembro</a></li>
+			<li><a href="{{ route('aniver', 10) }}">Outubro</a></li>
+			<li><a href="{{ route('aniver', 11) }}">Novembro</a></li>
+			<li><a href="{{ route('aniver', 12) }}">Dezembro</a></li>
 
-	</ul>
-</aside>
+		</ul>
+	</aside>
 
 </div> <!-- /.sidebar -->
 
@@ -646,7 +721,7 @@
 
 		THEMEREX_GLOBALS["strings"] = {
 			bookmark_add: "Add the bookmark",
-			bookmark_added:		"Current page has been successfully added to the bookmarks. You can see it in the right panel on the tab \'Bookmarks\'",
+			bookmark_added:		"Current page has en successfully added to the bookmarks. You can see it in the right panel on the tab \'Bookmarks\'",
 			bookmark_del: "Delete this bookmark",
 			bookmark_title:		"Enter bookmark title",
 			bookmark_exists:		"Current page already exists in the bookmarks list",

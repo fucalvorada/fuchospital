@@ -450,14 +450,16 @@ input[type="checkbox"]:checked + label:before {
 }
 
 /* User and main menu */
-.menu_user_wrap {
+/*.menu_user_wrap {
   height: 70px;
-}
+}*/
 
 .menu_user_wrap .logo {
-  width: 295px;
-  float: left;
-  table-layout: fixed;
+    width: 295px;
+    height: 101px;
+    z-index: 999999999999;
+    float: left;
+    table-layout: fixed;
 /*  
 
     -moz-transition: height linear 0.3s;

@@ -33,6 +33,12 @@ Route::post('/painel/eventos/update', 'EventosController@update')->name('update_
 Route::get('/eventos/show/{id}', 'EventosController@show')->name('show');
 Route::post('/painel/eventos/delete/{id}', 'EventosController@destroy')->name('delete_evento');
 
+// Aniversariantes
+Route::get('/aniver/lista/{data}', 'AniverController@lista')->name('aniver');
+
+
+
+
 
 
 
