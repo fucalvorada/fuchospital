@@ -34,13 +34,21 @@ Route::get('/eventos/show/{id}', 'EventosController@show')->name('show');
 Route::post('/painel/eventos/delete/{id}', 'EventosController@destroy')->name('delete_evento');
 
 // Aniversariantes
-Route::get('/aniver/lista/{data}', 'AniverController@lista')->name('aniver');
+Route::get('/aniver/lista', 'AniverController@lista')->name('aniver'); 
+Route::get('/aniver/lista/{data}', 'AniverController@listaMes')->name('aniver_mes');
+Route::post('/aniver/listaUser', 'AniverController@listaUser')->name('aniver_user'); 
 
 
 // Cardapio
 Route::get('/painel/cardapio', 'CardapiosController@index')->name('cardapio');
 Route::get('/painel/cardapio/cadastrar', 'CardapiosController@index')->name('cadastrar_cardapio');
 Route::get('/painel/cardapio/update', 'CardapiosController@index')->name('update_cardapio');
+
+// Perfil
+Route::get('/perfil/index', 'PerfilController@index')->name('perfil');
+Route::get('/perfil/edit', 'PerfilController@edit')->name('edit_perfil');
+
+
 
 
 

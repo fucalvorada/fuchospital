@@ -9,8 +9,7 @@
 <link rel="alternate" type="application/rss+xml" title="Alliance &raquo; Comments Feed" href="http://alliance.themerex.net/comments/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Alliance &raquo; Team Leaders Comments Feed" href="http://alliance.themerex.net/team-leaders/feed/" />
 
-<link rel="stylesheet" type="text/css" href="{{asset('css/aniver.css')}}">
-
+<link rel="stylesheet" type="text/css" href="{{ asset('css/aniver')}}">
 <script type="text/javascript">
 	window._wpemojiSettings = {
 		"baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/",
@@ -67,36 +66,14 @@
 		<span class="post_icon icon-book-2"></span>Aniversariantes
 	</h1>
 
-	<div class="card-body">
-		<form method="POST" action="{{ route('aniver_user')}}" >
-			@csrf
-			<div class="form-group">
-				<label for="password" class="col-md-4 col-form-label ">Usuário</label>
-
-				<div class="col-md-6">
-					<select id="id" class="form-control" name="id">
-						<option value="0">Selecione</option>
-						@foreach($user as $not)
-						<option value="{{ $not->id}}">{{ $not->name }}</option>
-						@endforeach
-					</select>
-				</div>
-			</div>
-
-			<div class="modal-footer" style="">
-				<button type="submit" class="btn btn-primary">Pesquisar</button>
-			</div>
-		</form>
-	</div>
 
 	<div class="sc_team sc_team_style_2">
 		<div class="sc_columns columns_wrap">
 
-			@forelse($user as $not)
 			<div class="column-1_4">
 				<div class="sc_team_item sc_team_item_1 odd first">
 					<div class="sc_team_item_avatar">
-						<img class="wp-post-image" width="326" height="340" alt="" src='{{ asset("storage/{$not->foto} ") }}'>
+						<img class="wp-post-image" width="326" height="340" alt="" src='{{ asset("storage/{$user->foto} ") }}'>
 						<div class="sc_team_item_hover">
 							<div class="sc_team_item_socials">
 								<div class="sc_socials sc_socials_size_small">
@@ -117,20 +94,13 @@
 					</div>
 					<div class="sc_team_item_info">
 						<div class="sc_team_item_email_button icon-mail-3"></div>
-						<div class="sc_team_item_email">{{ $not->email }}</div>
+						<div class="sc_team_item_email">{{ $user->email }}</div>
 						<h6 class="sc_team_item_title">
-							<a href="">{{ $not->name }}</a></h6>
-							<div class="sc_team_item_position">{{ date( 'd/m' , strtotime($not->nascimento)) }}</div>
+							<a href="">{{ $user->name }}</a></h6>
+							<div class="sc_team_item_position">{{ date( 'd/m' , strtotime($user->nascimento)) }}</div>
 						</div>
 					</div>
 				</div>
-				@empty
-
-				<div style="background:#fff; padding:10px; width:50%; border-radius:10px;">
-					<p style="color:red;">Não existem aniversariantes nesse Mês!</p>
-
-				</div>
-				@endforelse
 
 			</div>
 		</div>

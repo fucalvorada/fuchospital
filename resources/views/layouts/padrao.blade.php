@@ -512,7 +512,7 @@
 							</li>-->
 
 							<li>
-								<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+								<a href="{{ route('perfil') }}" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
 									{{ Auth::user()->name }} <span class="caret"></span>
 								</a>
 							</li>
@@ -579,11 +579,13 @@
 						</li>
 
 						<li id="menu-item-282" class="icon-20 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-282">
-							<a>Aniversariantes</a>
-							<ul class="sub-menu">
-								<li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590"><a href="{{ route('aniver', 0) }}">Ver Calendário</a></li>
-								<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730"><a href="">Painel</a></li>
-							</ul>
+							<a href="{{ route('aniver') }}">Aniversariantes</a>
+							<!-- <ul class="sub-menu">
+								<li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590"><a href="{{ route('aniver', 0) }}">Ver Calendário</a>
+								</li>
+								<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730"><a href="">Painel</a>
+								</li>
+							</ul> -->
 						</li>
 
 
@@ -670,18 +672,18 @@
 
 	<aside id="archives-3" class="widget_number_5 widget widget_archive"><h5 class="widget_title">Aniversariantes</h5>		
 		<ul>
-			<li><a href="{{ route('aniver', 1) }}">Janeiro</a></li>
-			<li><a href="{{ route('aniver', 2) }}">Fevereiro</a></li>
-			<li><a href="{{ route('aniver', 3) }}">Março</a></li>
-			<li><a href="{{ route('aniver', 4) }}">Abril</a></li>
-			<li><a href="{{ route('aniver', 5) }}">Maio</a></li>
-			<li><a href="{{ route('aniver', 6) }}">Junho</a></li>
-			<li><a href="{{ route('aniver', 7) }}">Julho</a></li>
-			<li><a href="{{ route('aniver', 8) }}">Agosto</a></li>
-			<li><a href="{{ route('aniver', 9) }}">Setembro</a></li>
-			<li><a href="{{ route('aniver', 10) }}">Outubro</a></li>
-			<li><a href="{{ route('aniver', 11) }}">Novembro</a></li>
-			<li><a href="{{ route('aniver', 12) }}">Dezembro</a></li>
+			<li><a href="{{ route('aniver_mes', 1) }}">Janeiro</a></li>
+			<li><a href="{{ route('aniver_mes', 2) }}">Fevereiro</a></li>
+			<li><a href="{{ route('aniver_mes', 3) }}">Março</a></li>
+			<li><a href="{{ route('aniver_mes', 4) }}">Abril</a></li>
+			<li><a href="{{ route('aniver_mes', 5) }}">Maio</a></li>
+			<li><a href="{{ route('aniver_mes', 6) }}">Junho</a></li>
+			<li><a href="{{ route('aniver_mes', 7) }}">Julho</a></li>
+			<li><a href="{{ route('aniver_mes', 8) }}">Agosto</a></li>
+			<li><a href="{{ route('aniver_mes', 9) }}">Setembro</a></li>
+			<li><a href="{{ route('aniver_mes', 10) }}">Outubro</a></li>
+			<li><a href="{{ route('aniver_mes', 11) }}">Novembro</a></li>
+			<li><a href="{{ route('aniver_mes', 12) }}">Dezembro</a></li>
 
 		</ul>
 	</aside>

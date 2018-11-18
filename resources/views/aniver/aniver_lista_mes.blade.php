@@ -9,8 +9,7 @@
 <link rel="alternate" type="application/rss+xml" title="Alliance &raquo; Comments Feed" href="http://alliance.themerex.net/comments/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Alliance &raquo; Team Leaders Comments Feed" href="http://alliance.themerex.net/team-leaders/feed/" />
 
-<link rel="stylesheet" type="text/css" href="{{asset('css/aniver.css')}}">
-
+<link rel="stylesheet" type="text/css" href="{{ asset('css/aniver')}}">
 <script type="text/javascript">
 	window._wpemojiSettings = {
 		"baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/",
@@ -66,28 +65,6 @@
 	<h1 class="post_title" style="text-transform: uppercase;">
 		<span class="post_icon icon-book-2"></span>Aniversariantes
 	</h1>
-
-	<div class="card-body">
-		<form method="POST" action="{{ route('aniver_user')}}" >
-			@csrf
-			<div class="form-group">
-				<label for="password" class="col-md-4 col-form-label ">Usuário</label>
-
-				<div class="col-md-6">
-					<select id="id" class="form-control" name="id">
-						<option value="0">Selecione</option>
-						@foreach($user as $not)
-						<option value="{{ $not->id}}">{{ $not->name }}</option>
-						@endforeach
-					</select>
-				</div>
-			</div>
-
-			<div class="modal-footer" style="">
-				<button type="submit" class="btn btn-primary">Pesquisar</button>
-			</div>
-		</form>
-	</div>
 
 	<div class="sc_team sc_team_style_2">
 		<div class="sc_columns columns_wrap">
