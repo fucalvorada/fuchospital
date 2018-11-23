@@ -61,6 +61,10 @@ Route::post('/painel/arquivos/update', 'ArquivosController@update')->name('updat
 Route::post('/painel/arquivos/edit/{id}', 'ArquivosController@edit')->name('edit_arquivo');
 Route::post('/painel/arquivos/delete/{id}', 'ArquivosController@destroy')->name('delete_arquivo');
 
+// Chamados
+Route::get('/chamados/index', 'ChamadoController@index')->name('chamado_view');
+
+
 
 
 

@@ -615,7 +615,7 @@
 						<li id="menu-item-1093" class="icon-8 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1093"><a>Suporte TI</a>
 							<ul class="sub-menu">
 								<li id="menu-item-1094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1094">
-									<a href="">Abrir Chamado</a>
+									<a href="{{ route('chamado_view')}}">Abrir Chamado</a>
 								</li>
 								<li id="menu-item-1113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1113">
 									<a href="">Painel</a>

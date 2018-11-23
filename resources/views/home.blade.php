@@ -12,7 +12,7 @@
         <div class="post_thumb post_nav" data-image="{{ asset('home/51.jpg')}}" data-title="51">
 
             <img class="wp-post-image" width="1150" alt="51.jpg" src="{{ asset('storage/home/51.jpg') }}">
-            <a class="post_nav_item post_nav_prev" href="">
+<!--             <a class="post_nav_item post_nav_prev" href="">
                 <span class="post_nav_info">
                     <span class="post_nav_info_title">item Anterior </span>
                     <span class="post_nav_info_description"></span>
@@ -23,7 +23,7 @@
                     <span class="post_nav_info_title">Próximo item</span>
                     <span class="post_nav_info_description"></span>
                 </span>
-            </a>
+            </a> -->
         </div>
     </div>
 </article>
