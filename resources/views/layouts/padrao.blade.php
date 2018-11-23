@@ -573,8 +573,8 @@
 						</li>
 						<li id="menu-item-805" class="icon-13 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-805"><a>Documentos</a>
 							<ul class="sub-menu">
-								<li id="menu-item-618" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-618"><a href="">Ver Arquivos</a></li>
-								<li id="menu-item-442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-442"><a href="">Painel</a></li>
+								<li id="menu-item-618" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-618"><a href="{{ route('arquivos_view') }}">Ver Arquivos</a></li>
+								<li id="menu-item-442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-442"><a href="{{ route('painel_arquivos') }}">Painel</a></li>
 							</ul>
 						</li>
 
@@ -605,7 +605,7 @@
 							<a>Cardápio</a>
 							<ul class="sub-menu">
 								<li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590">
-									<a href="">Ver Cardápio</a>
+									<a href="{{ route('lista_cardapio')}}">Ver Cardápio</a>
 								</li>
 								<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730">
 									<a href="{{ route('cardapio') }}">Painel</a>
@@ -644,6 +644,8 @@
 				<section class="related_wrap related_wrap_empty"></section>
 
 			</div>
+
+
 
 			<div class="sidebar widget_area bg_tint_light sidebar_style_light" style="background: #b2221f;" role="complementary"> 
 

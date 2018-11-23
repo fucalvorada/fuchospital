@@ -10,9 +10,6 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 
-		CKEDITOR.replace( 'editor_noticia' );
-		CKEDITOR.config.autoParagraph = false;
-
 		$('#example').DataTable({
 			"entriesSearch":false,
 			"lengthChange":false,
@@ -82,7 +79,7 @@
 
 			type: "POST",
 			data: id,
-			url: "/painel/cardapio/delete/"+id,
+			url: "/painel/arquivos/delete/"+id,
 			headers: {
 				'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
 			},
@@ -107,14 +104,13 @@
 
 			type: "POST",
 			data: id,
-			url: "/painel/cardapio/edit/"+id,
+			url: "/painel/arquivos/edit/"+id,
 			headers: {
 				'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
 			},
 			success: function(response) {
 
-				$('#title_id').val(response.date);
-				$('#body_id').val(response.cardapio);
+				$('#title_id').val(response.name);
 				$('#id_notice').val(response.id);
 
 				var id = $(this).attr("href");
@@ -173,29 +169,29 @@
 			<table id="example"  summary="1" cellspacing="0">
 				<thead>
 					<tr>
-						<td>Data</td>
-						<td>Cardápio</td>
-						<td>Notícia</td>
+						<td>Cod</td>
+						<td>Nome</td>
+						<td>Arquivo</td>
 						<td>Ações</td>
 					</tr>
 				</thead>
 				<tbody>
 
-					@foreach($cardapios as $not)
+					@foreach($arquivos as $not)
 
 					<tr>
 						<td class="categories">
 							<a href="">
-								<span class="post_category">{{ date( 'd/m' , strtotime($not->date)) }}</span>
+								<span class="post_category">{{ $not->id }}</span>
 							</a> 
 						</td>
 						<td >
 							<a href="">
-								<span class="post_category">{{ $not->cardapio }}</span>
+								<span class="post_category">{{ $not->name }}</span>
 							</a> 
 						</td>
 						<td class="location">
-							<a href="">{{ $not->date }} </a>
+							<a href="">{{ $not->arquivo }} </a>
 						</td>
 						<td class="acoes">
 							<a href="javascript:edit({{ $not->id }})" id="editando" >
@@ -220,7 +216,7 @@
 @section('modal')
 <div class="modal-content">
 	<div class="modal-header">
-		<h5 class="" id="">Cadastrar Cardápio</h5>
+		<h5 class="" id="">Cadastrar Arquivo</h5>
 	</div>
 	<div style="float: right;">
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -228,16 +224,17 @@
 		</button>
 	</div>
 	<div class="modal-body">
-		<form method="post"  class="form_painel_notice" action="{{ route('cadastrar_cardapio') }}" enctype="multipart/form-data">
+		<form method="post"  class="form_painel_notice" action="{{ route('cadastrar_arquivo') }}" enctype="multipart/form-data">
 
 			@csrf
 			<div>
-				<label class="label_notice">Data</label>
-				<input class="input_fuc" type="date" name="title_notice" id="title_notice">
+				<label class="label_notice">Nome</label>
+				<input class="input_fuc" type="text" name="title_notice" id="title_notice">
 			</div>
 			<div>
-				<label class="label_notice">Cardápio</label>
-				<textarea name="editor_noticia" id="editor_noticia" rows="10" cols="80"></textarea>
+				<label class="label_notice">Arquivo</label>
+				{{ csrf_field() }}
+				<input type="file" name="image_notice" id="image_notice" accept="image/*">
 			</div>
 
 			<div class="modal-footer" style="bottom: 10%;position: absolute;">
@@ -253,7 +250,7 @@
 @section('modalEdit')
 <div class="modal-content">
 	<div class="modal-header">
-		<h5 class="" id="">Editar Notícia</h5>
+		<h5 class="" id="">Editar Arquivo</h5>
 	</div>
 	<div style="float: right;">
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -261,20 +258,22 @@
 		</button>
 	</div>
 	<div class="modal-body">
-		<form method="post"  class="form_painel_notice" action="{{ route('update_cardapio') }}" enctype="multipart/form-data">
+		<form method="post"  class="form_painel_notice" action="{{ route('update_arquivo') }}" enctype="multipart/form-data">
 
 			@csrf
 			<div>
-				<label class="label_notice">Data</label>
-				<input class="input_fuc" type="date" name="title_notice" id="title_id">
+				<label class="label_notice">Nome</label>
+				<input class="input_fuc" type="text" name="title_notice" id="title_id">
 				<input type="hidden" name="id_notice" id="id_notice">
 
 			</div>
+
 			<div>
-				<label class="label_notice">Conteúdo</label>
-				<textarea name="editor_noticia" id="body_id" rows="10" cols="80"></textarea>
+				<label class="label_notice">Imagem</label>
+				{{ csrf_field() }}
+				<input type="file" name="image_notice" id="" accept="image/*">
 			</div>
-					
+
 			<div class="modal-footer" style="bottom: 10%;position: absolute;">
 				<button type="submit" class="btn btn-primary">Gravar</button>
 			</div>

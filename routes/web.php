@@ -41,12 +41,30 @@ Route::post('/aniver/listaUser', 'AniverController@listaUser')->name('aniver_use
 
 // Cardapio
 Route::get('/painel/cardapio', 'CardapiosController@index')->name('cardapio');
-Route::get('/painel/cardapio/cadastrar', 'CardapiosController@index')->name('cadastrar_cardapio');
-Route::get('/painel/cardapio/update', 'CardapiosController@index')->name('update_cardapio');
+Route::get('/painel/cardapio/lista', 'CardapiosController@lista')->name('lista_cardapio');
+Route::post('/painel/cardapio/cadastrar', 'CardapiosController@cadastrar')->name('cadastrar_cardapio');
+Route::post('/painel/cardapio/update', 'CardapiosController@update')->name('update_cardapio');
+Route::post('/painel/cardapio/edit/{id}', 'CardapiosController@edit')->name('edit_cardapio');
+Route::post('/painel/cardapio/delete/{id}', 'CardapiosController@destroy')->name('delete_cardapio');
+
+
 
 // Perfil
 Route::get('/perfil/index', 'PerfilController@index')->name('perfil');
 Route::get('/perfil/edit', 'PerfilController@edit')->name('edit_perfil');
+
+// Arquivos
+Route::get('/arquivos/index', 'ArquivosController@index')->name('arquivos_view');
+Route::get('/painel/arquivos/lista', 'ArquivosController@lista')->name('painel_arquivos');
+Route::post('/painel/arquivos/cadastrar', 'ArquivosController@cadastrar')->name('cadastrar_arquivo');
+Route::post('/painel/arquivos/update', 'ArquivosController@update')->name('update_arquivo');
+Route::post('/painel/arquivos/edit/{id}', 'ArquivosController@edit')->name('edit_arquivo');
+Route::post('/painel/arquivos/delete/{id}', 'ArquivosController@destroy')->name('delete_arquivo');
+
+
+
+
+
 
 
 

@@ -29,6 +29,7 @@ class PerfilController extends Controller
 
 	public function edit(){
 
+
 		$id = Auth::User()->id;
 
 		$user = User::find($id);
