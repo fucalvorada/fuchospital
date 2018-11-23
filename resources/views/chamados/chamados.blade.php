@@ -1,4 +1,5 @@
 
+
 @extends('layouts.padrao')
 
 @section('content')
@@ -153,11 +154,6 @@
 		<div class="alert alert-info">{{ Session::get('message') }}</div>
 		@endif
 
-
-		<div class="bbp-search-form"  style="margin-bottom:10px;">
-			<button type="button" style="margin: 10px;"  id="teste">Novo Chamado</button>
-		</div>
-
 		<ul id="forums-list-0" class="bbp-forums">
 
 			<li class="bbp-header">
@@ -180,7 +176,7 @@
 				<ul id="bbp-forum-1725" class="loop-item-0 odd bbp-forum-status-open bbp-forum-visibility-publish post-1725 forum type-forum status-publish hentry">
 
 					<li class="bbp-forum-info">
-						<a class="bbp-forum-title" href=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ $not->title}}</font></font></a>
+						<a class="bbp-forum-title" href="{{ route('chamado_show',$not->id )}}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ $not->title}}</font></font></a>
 
 						<div class="bbp-forum-content">
 							<font style="vertical-align: inherit;">

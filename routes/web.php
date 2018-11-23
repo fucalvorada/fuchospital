@@ -7,6 +7,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index')->name('home');
 
+// Noticias
 Route::get('/painel/noticias', 'NoticiasController@index')->name('noticia');
 Route::post('/painel/noticias/cadastrar', 'NoticiasController@cadastrar')->name('cadastrar');
 Route::get('/noticias/lista', 'NoticiasController@lista')->name('lista');
@@ -23,7 +24,6 @@ Route::post('/painel/avisos/cadastrar', 'AvisosController@cadastrar')->name('cad
 Route::post('/painel/avisos/update', 'AvisosController@update')->name('update_aviso');
 Route::post('/painel/avisos/delete/{id}', 'AvisosController@destroy')->name('delete_aviso');
 
-
 // Evento
 Route::get('/painel/eventos', 'EventosController@index')->name('evento');
 Route::get('/eventos/lista', 'EventosController@lista')->name('lista_evento');
@@ -38,7 +38,6 @@ Route::get('/aniver/lista', 'AniverController@lista')->name('aniver');
 Route::get('/aniver/lista/{data}', 'AniverController@listaMes')->name('aniver_mes');
 Route::post('/aniver/listaUser', 'AniverController@listaUser')->name('aniver_user'); 
 
-
 // Cardapio
 Route::get('/painel/cardapio', 'CardapiosController@index')->name('cardapio');
 Route::get('/painel/cardapio/lista', 'CardapiosController@lista')->name('lista_cardapio');
@@ -46,8 +45,6 @@ Route::post('/painel/cardapio/cadastrar', 'CardapiosController@cadastrar')->name
 Route::post('/painel/cardapio/update', 'CardapiosController@update')->name('update_cardapio');
 Route::post('/painel/cardapio/edit/{id}', 'CardapiosController@edit')->name('edit_cardapio');
 Route::post('/painel/cardapio/delete/{id}', 'CardapiosController@destroy')->name('delete_cardapio');
-
-
 
 // Perfil
 Route::get('/perfil/index', 'PerfilController@index')->name('perfil');
@@ -63,6 +60,14 @@ Route::post('/painel/arquivos/delete/{id}', 'ArquivosController@destroy')->name(
 
 // Chamados
 Route::get('/chamados/index', 'ChamadoController@index')->name('chamado_view');
+Route::post('/chamados/cadastrar', 'ChamadoController@cadastrar')->name('reportar_chamado');
+Route::get('/chamados/lista', 'ChamadoController@lista')->name('chamado_lista');
+Route::get('/chamados/view/{id}', 'ChamadoController@view')->name('chamado_show');
+Route::post('/chamados/responder', 'ChamadoController@responder')->name('responder_chamado');
+
+
+
+
 
 
 

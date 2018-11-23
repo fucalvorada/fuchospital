@@ -618,7 +618,7 @@
 									<a href="{{ route('chamado_view')}}">Abrir Chamado</a>
 								</li>
 								<li id="menu-item-1113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1113">
-									<a href="">Painel</a>
+									<a href="{{ route('chamado_lista')}}">Painel</a>
 								</li>
 							</ul>
 						</li>
