@@ -72,7 +72,6 @@ class ChamadoController extends Controller
 		$resposta = new Resposta;
 		$resposta->id_chamado = $request->id_chamado;
 		$resposta->resposta = $request->resposta;
-
 		
 		if( $resposta->save() ){
 			return redirect()->back()->with('message', 'sucesso!'); 

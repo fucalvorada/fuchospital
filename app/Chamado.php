@@ -25,10 +25,10 @@ class Chamado extends Model
 
 	static public function chamdoUserView($id) {
 
-		return \DB::table('users')
-		->join('chamados', 'users.id', '=', 'chamados.user_id')
-		->join('respostas', 'respostas.id_chamado', '=', 'chamados.id')
-		->where('chamados.id', '=', $id)
+		return \DB::table('users as u')
+		->join('chamados as c', 'u.id', '=', 'c.user_id')
+		->join('respostas as r', 'r.id_chamado', '=', 'c.id')
+		->where('c.id', '=', $id)
 		->get();
 	}
 }

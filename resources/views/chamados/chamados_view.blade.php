@@ -10,9 +10,6 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 
-		CKEDITOR.replace( 'editor_noticia' );
-		CKEDITOR.config.autoParagraph = false;
-
 		$('#example').DataTable({
 			"entriesSearch":false,
 			"lengthChange":false,
@@ -94,7 +91,9 @@
 
 		<form method="post"  class="form_painel_notice" action="{{ route('responder_chamado') }}" enctype="multipart/form-data">
 
-			<input type="hidden" name="id_chamado" value="{{ $chamados[0]->id}}">
+			@csrf
+
+			<input type="hidden" name="id_chamado" value="{{ $chamados[0]->user_id}}">
 			<div class=""  style="margin-bottom:10px; margin-top: 10%;">
 				<label class="label_notice" style="color:#fff; font-weight:bold;font-size:13px;">Responder</label>
 				<textarea name="resposta" cols="80" rows="8"></textarea>
