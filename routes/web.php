@@ -48,7 +48,10 @@ Route::post('/painel/cardapio/delete/{id}', 'CardapiosController@destroy')->name
 
 // Perfil
 Route::get('/perfil/index', 'PerfilController@index')->name('perfil');
-Route::get('/perfil/edit', 'PerfilController@edit')->name('edit_perfil');
+Route::post('/perfil/edit/{id}', 'PerfilController@edit')->name('edit_perfil');
+Route::post('/perfil/update', 'PerfilController@update')->name('perfil_update');
+Route::post('/perfil/confirm/{id}', 'PerfilController@confirm')->name('confirm');
+Route::get('/perfil/adm_user', 'PerfilController@admUser')->name('adm_user');
 
 // Arquivos
 Route::get('/arquivos/index', 'ArquivosController@index')->name('arquivos_view');

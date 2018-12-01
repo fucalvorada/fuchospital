@@ -5,7 +5,7 @@
 
     <h1 class="post_title" style='text-transform: uppercase;'>
         <span class="post_icon icon-book-2"></span>BEM VINDO,
-        <P>{{ Auth::user()->name }}</P>
+        <P>{{ Auth::user()->nomecompleto }}</P>
     </h1>
 
     <div class="post_featured">

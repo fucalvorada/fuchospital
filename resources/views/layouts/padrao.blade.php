@@ -716,6 +716,10 @@
 <div class="window2" id="janela2" style="display: none;">
 	@yield('modalEdit')
 </div>
+
+<div class="window3" id="janela3" style="display: none;">
+	@yield('modalConfirma')
+</div>
 <!-- mascara para cobrir o site -->  
 <div id="mascara"></div>
 
