@@ -57,11 +57,13 @@
 				'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
 			},
 			success: function(response) {
-				$('#edit_nome').val(response.nomecompleto);
-				$('#edit_email').val(response.email);
-				$('#edit_user').val(response.name);
-				$('#id_user').val(response.id);
-				$('#edit_aniver').val(response.nascimento);
+				console.log(response);
+				$('#edit_nome').val(response.user.nomecompleto);
+				$('#edit_email').val(response.user.email);
+				$('#edit_user').val(response.user.name);
+				$('#id_user').val(response.user.id);
+				$('#edit_aniver').val(response.user.nascimento);
+				$('#permission').html(response.permission);
 
 				var id = $(this).attr("href");
 
@@ -146,7 +148,7 @@
 		@endif
 		<div class="sc_section" style="background-color:#fff; border-radius: 4px; box-shadow: 1px 2px #e8eaec;">
 
-			<button type="button" style="margin: 10px;"  id="teste">Novo usuário</button>
+			<button type="button" style="margin: 10px;"  id="teste"><a href="{{ route('registrar')}}">Novo usuário</a></button>
 
 			<div class="sc_section_overlay" style=" padding:40px;">
 
@@ -239,6 +241,7 @@
 				<label class="label_notice">Data Nascimento</label>
 				<input class="input_fuc" type="date" name="edit_aniver" id="edit_aniver">
 			</div>
+
 			<div>
 				<label class="label_notice">Foto</label>
 				{{ csrf_field() }}

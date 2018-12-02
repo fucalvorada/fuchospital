@@ -52,6 +52,8 @@ Route::post('/perfil/edit/{id}', 'PerfilController@edit')->name('edit_perfil');
 Route::post('/perfil/update', 'PerfilController@update')->name('perfil_update');
 Route::post('/perfil/confirm/{id}', 'PerfilController@confirm')->name('confirm');
 Route::get('/perfil/adm_user', 'PerfilController@admUser')->name('adm_user');
+Route::get('/perfil/registrar', 'PerfilController@registrar')->name('registrar');
+Route::post('/perfil/cadastrarUser', 'PerfilController@cadastrarUser')->name('cadastrar_user');
 
 // Arquivos
 Route::get('/arquivos/index', 'ArquivosController@index')->name('arquivos_view');

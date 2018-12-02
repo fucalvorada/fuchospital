@@ -107,6 +107,12 @@ class NoticiasController extends Controller
 		$noticia->title = $request->title_notice;
 		$noticia->body 	= $request->editor_noticia;
 
+		if(null != $request->image_notice && !empty($request->image_notice)){
+
+			//faz upload na pasta storage/public/noticia
+			$noticia->image  = $this->upload($request);
+		}
+
 		if( $noticia->save() ){
 			return redirect()->back()->with('message', 'Editado com sucesso!'); 
 		}else{

@@ -571,24 +571,28 @@
 						<li id="menu-item-1951" class="icon-9 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1951"><a>Avisos</a>
 							<ul class="sub-menu">
 								<li id="menu-item-1954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1954"><a href="{{ route('lista_aviso') }}">Ver Avisos</a></li>
-								<li id="menu-item-1953" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1953"><a href="{{ route('aviso') }}">Painel</a></li>
+
+								@can('create_aviso')
+								<li id="menu-item-1953" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1953">
+								<a href="{{ route('aviso') }}">Painel</a>
+								</li>
+								@endcan
 							</ul>
 						</li>
 						<li id="menu-item-805" class="icon-13 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-805"><a>Documentos</a>
 							<ul class="sub-menu">
 								<li id="menu-item-618" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-618"><a href="{{ route('arquivos_view') }}">Ver Arquivos</a></li>
-								<li id="menu-item-442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-442"><a href="{{ route('painel_arquivos') }}">Painel</a></li>
+
+								@can('create_doc')
+								<li id="menu-item-442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-442">
+								<a href="{{ route('painel_arquivos') }}">Painel</a>
+								</li>
+								@endcan
 							</ul>
 						</li>
 
 						<li id="menu-item-282" class="icon-20 menu-item menu-item-type-taxonomy menu-item-object-category menu-item-282">
 							<a href="{{ route('aniver') }}">Aniversariantes</a>
-							<!-- <ul class="sub-menu">
-								<li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590"><a href="{{ route('aniver', 0) }}">Ver Calendário</a>
-								</li>
-								<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730"><a href="">Painel</a>
-								</li>
-							</ul> -->
 						</li>
 
 
@@ -598,9 +602,13 @@
 								<li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590">
 									<a href="{{ route('lista_evento') }}">Ver Eventos</a>
 								</li>
+
+								@can('create_eventos')
 								<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730">
 									<a href="{{ route('evento') }}">Painel</a>
 								</li>
+								@endcan
+
 							</ul>
 						</li>
 
@@ -610,21 +618,31 @@
 								<li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590">
 									<a href="{{ route('lista_cardapio')}}">Ver Cardápio</a>
 								</li>
+
+								@can('create_cardapio')
 								<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730">
 									<a href="{{ route('cardapio') }}">Painel</a>
 								</li>
+								@endcan
 							</ul>
 						</li>
+
+						@can('create_suporte')
 						<li id="menu-item-1093" class="icon-8 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1093"><a>Suporte TI</a>
 							<ul class="sub-menu">
 								<li id="menu-item-1094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1094">
 									<a href="{{ route('chamado_view')}}">Abrir Chamado</a>
 								</li>
+
+								@can('gen_chamado')
 								<li id="menu-item-1113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1113">
 									<a href="{{ route('chamado_lista')}}">Painel</a>
 								</li>
+								@endcan
+								
 							</ul>
 						</li>
+						@endcan
 
 						<li id="menu-item-1093" class="icon-10 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1093">
 							<a href="http://labac.cardiologia.org.br/hlisweb/inicio.asp" target="_blank"> Exames</a>

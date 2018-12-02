@@ -34,7 +34,7 @@
 			},
 			success: function(response) {
 
-				console.log(response);
+				
 				$('#edit_nome').val(response.nomecompleto);
 				$('#edit_email').val(response.email);
 				$('#edit_user').val(response.name);
@@ -64,7 +64,10 @@
 
 
 <div class="page_content_wrap" style="background:#fff;"  >
+
+		@can('adm_user')
 		<button type="button" style="margin-bottom: 30px;margin-right: 10px; float:right;"><a style="color:#fff;" href="{{ route('adm_user') }}">Administrar Usuários</a></button>
+		@endcan
 
 
 	@if (Session::has('message'))
@@ -229,6 +232,7 @@
 				<label class="label_notice">Data Nascimento</label>
 				<input class="input_fuc" type="date" name="edit_aniver" id="edit_aniver">
 			</div>
+
 			<div>
 				<label class="label_notice">Foto</label>
 				{{ csrf_field() }}
