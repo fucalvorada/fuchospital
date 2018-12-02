@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Permission;
 
 class User extends Authenticatable
 {
@@ -28,10 +29,32 @@ class User extends Authenticatable
     'password', 'remember_token',
     ];
 
+    public function roles(){
+
+       return  $this->belongsToMany(\App\Role::class);
+    }
 
     static public function findDataNasci( $date) {
 
         return \DB::table('users')->whereMonth('nascimento', $date)
         ->orderBy('nascimento')->get();
+    }
+
+    public function hasPermission(Permission $permission){
+
+        return $this->hasAnyRoles($permission->roles);
+
+    }
+
+    public function hasAnyRoles($roles){
+
+        if(is_array($roles)  || is_object($roles)){
+
+            foreach ($roles as $rol) {
+                return $this->roles->contains('name', $rol->name);
+            }
+        }
+
+        return $this->roles->contains('name', $roles);
     }
 }

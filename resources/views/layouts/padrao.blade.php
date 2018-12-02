@@ -559,10 +559,13 @@
 								<li id="menu-item-857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-857">
 									<a href="/noticias/lista">Todas Notícias</a>
 								</li>
+								@can('create_notice')
 
 								<li id="menu-item-990" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-990">
 									<a href="/painel/noticias">Painel</a>
 								</li>
+
+								@endcan
 							</ul>
 						</li>
 						<li id="menu-item-1951" class="icon-9 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1951"><a>Avisos</a>
