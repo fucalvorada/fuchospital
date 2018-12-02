@@ -32,10 +32,10 @@ class User extends Authenticatable
 
     public function roles(){
 
-       return  $this->belongsToMany(\App\Role::class);
-   }
+     return  $this->belongsToMany(\App\Role::class);
+ }
 
-   static public function findDataNasci( $date) {
+ static public function findDataNasci( $date) {
 
     return \DB::table('users')->whereMonth('nascimento', $date)
     ->orderBy('nascimento')->get();
@@ -43,7 +43,7 @@ class User extends Authenticatable
 
 public function hasPermission(Permission $permission){
 
- return $this->hasAnyRoles($permission->roles);
+   return $this->hasAnyRoles($permission->roles);
 
 }
 
@@ -63,18 +63,18 @@ public function hasAnyRoles($roles){
 public static function PermissionUser($id){
 
 
-   return \DB::table('users as u')
-   ->join('permission_role as pr', 'u.id', '=', 'pr.role_id')
-   ->join('permissions as p', 'pr.permission_id', '=', 'p.id')
-   ->where('u.id', '=', $id)
-   ->select('p.label')
-   ->get();
+ return \DB::table('users as u')
+ ->join('permission_role as pr', 'u.id', '=', 'pr.role_id')
+ ->join('permissions as p', 'pr.permission_id', '=', 'p.id')
+ ->where('u.id', '=', $id)
+ ->select('p.label')
+ ->get();
 
 }
 
 public static function insert_adm($user){
 
- \DB::table('role_user')->insert([
+   \DB::table('role_user')->insert([
 
     ['role_id' => 7,'user_id' => $user->id ],
     ['role_id' => 1,'user_id' => $user->id ]
@@ -84,7 +84,7 @@ public static function insert_adm($user){
 
 public static function insert_dir($user){
 
- \DB::table('role_user')->insert([
+   \DB::table('role_user')->insert([
 
     ['role_id' => 2,'user_id' => $user->id ],
     ['role_id' => 6,'user_id' => $user->id ],
@@ -95,13 +95,22 @@ public static function insert_dir($user){
 
 public static function insert_pad($user){
 
- \DB::table('role_user')->insert([
+   \DB::table('role_user')->insert([
 
     ['role_id' => 2,'user_id' => $user->id ],
     ['role_id' => 3,'user_id' => $user->id ]
 
     ]);
 }
+
+public static function delete_role($id){
+
+    if(!is_null($id)){
+       \DB::table('role_user')->where('user_id', $id)->delete();
+   }
+   
+}
+
 
 
 }

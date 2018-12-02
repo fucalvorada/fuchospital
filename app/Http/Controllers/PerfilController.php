@@ -73,6 +73,20 @@ class PerfilController extends Controller
 		}
 
 		if( $user->save() ){
+
+			if($request->cad_nivel != 0){
+
+				User::delete_role($request->id_user);
+
+					if($request->cad_nivel == 1){
+						User::insert_adm($user);
+
+					}else if($request->cad_nivel == 2){
+						User::insert_dir($user);
+					}else{
+						User::insert_pad($user);
+					}
+			}
 			return redirect()->back()->with('message', 'sucesso!'); 
 		}else{
 			return redirect()->back()->with('message', 'erro!'); 
@@ -156,6 +170,7 @@ class PerfilController extends Controller
 
 	public function admUser(){
 
+		$this->authorize('create_user');
 		$user = User::all();
 		return view('perfil.admUser', ['user'=>$user]);
 	}

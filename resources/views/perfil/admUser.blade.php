@@ -243,6 +243,17 @@
 			</div>
 
 			<div>
+				<label class="label_notice">Nível de acesso</label>
+				<select name="cad_nivel" id="cad_nivel">
+					<option value="0" >Selecione</option>
+					<option value="3">Padrão</option>
+					<option value="1">Administrador</option>
+					<option value="2">Diretor</option>
+
+				</select>
+			</div>
+
+			<div>
 				<label class="label_notice">Foto</label>
 				{{ csrf_field() }}
 				<input type="file" name="image_notice" id="" accept="image/*">

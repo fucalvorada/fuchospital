@@ -559,7 +559,7 @@
 								<li id="menu-item-857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-857">
 									<a href="/noticias/lista">Todas Notícias</a>
 								</li>
-								@can('create_notice')
+								@can('create_doc')
 
 								<li id="menu-item-990" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-990">
 									<a href="/painel/noticias">Painel</a>
@@ -572,7 +572,7 @@
 							<ul class="sub-menu">
 								<li id="menu-item-1954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1954"><a href="{{ route('lista_aviso') }}">Ver Avisos</a></li>
 
-								@can('create_aviso')
+								@can('create_doc')
 								<li id="menu-item-1953" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1953">
 								<a href="{{ route('aviso') }}">Painel</a>
 								</li>
@@ -619,7 +619,7 @@
 									<a href="{{ route('lista_cardapio')}}">Ver Cardápio</a>
 								</li>
 
-								@can('create_cardapio')
+								@can('create_doc')
 								<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730">
 									<a href="{{ route('cardapio') }}">Painel</a>
 								</li>

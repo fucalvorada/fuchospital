@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\Noticia;
 
+use Illuminate\Support\Facades\Gate;
+
 class NoticiasController extends Controller
 {
 
@@ -20,6 +22,7 @@ class NoticiasController extends Controller
 	public function index(){
 
 		$noticias = Noticia::all();
+		$this->authorize('create_notice');
 
 		return view('noticias.painel_noticia', ['noticias' => $noticias]);
 
@@ -27,7 +30,7 @@ class NoticiasController extends Controller
 
 	public function lista(){
 
-		$noticias = Noticia::all();
+		$noticias = Noticia::orderBy('created_at', 'desc')->get();
 		return view('noticias.painel_noticia_lista', ['noticias' => $noticias ]);
 
 	}

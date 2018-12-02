@@ -15,6 +15,7 @@ class EventosController extends Controller
 	
 	public function index(){
 
+		$this->authorize('create_evento');
 		$eventos = Evento::all();
 
 		return view('eventos.painel_eventos', ['eventos' => $eventos]);
