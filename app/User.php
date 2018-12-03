@@ -51,6 +51,7 @@ public function hasAnyRoles($roles){
 
     if(is_array($roles)  || is_object($roles)){
 
+
         foreach ($roles as $rol) {
 
             return $this->roles->contains('name', $rol->name);

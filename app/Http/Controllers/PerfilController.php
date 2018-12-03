@@ -170,7 +170,6 @@ class PerfilController extends Controller
 
 	public function admUser(){
 
-		$this->authorize('create_user');
 		$user = User::all();
 		return view('perfil.admUser', ['user'=>$user]);
 	}

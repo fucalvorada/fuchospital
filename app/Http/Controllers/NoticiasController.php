@@ -22,7 +22,6 @@ class NoticiasController extends Controller
 	public function index(){
 
 		$noticias = Noticia::all();
-		$this->authorize('create_notice');
 
 		return view('noticias.painel_noticia', ['noticias' => $noticias]);
 

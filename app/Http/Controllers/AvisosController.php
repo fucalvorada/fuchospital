@@ -17,8 +17,6 @@ class AvisosController extends Controller
 	}
 
 	public function index(){
-
-		$this->authorize('create_notice');
 		$avisos = Aviso::all();
 
 		return view('avisos.painel_aviso', ['avisos' => $avisos]);
