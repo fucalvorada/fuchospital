@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 02-Dez-2018 às 20:31
+-- Generation Time: 03-Dez-2018 às 19:17
 -- Versão do servidor: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -41,7 +41,6 @@ CREATE TABLE `arquivos` (
 --
 
 INSERT INTO `arquivos` (`id`, `name`, `arquivo`, `created_at`, `updated_at`) VALUES
-(1, 'teste', 'teste.txt', '2018-11-23 02:00:00', '2018-11-23 02:00:00'),
 (2, 'teste2', 'teste2.txt', '2018-11-23 02:00:00', '2018-11-23 02:00:00'),
 (4, 'arquivo2', 'arquivos/053547201811235bf791b352d1a.jpeg', '2018-11-23 07:35:47', '2018-11-23 07:35:47');
 
@@ -114,7 +113,8 @@ INSERT INTO `chamados` (`id`, `title`, `body`, `user_id`, `created_at`, `updated
 (3, 'Problema 3', 'Problema no logout.', 2, '2018-11-23 22:52:54', '2018-11-23 22:52:54'),
 (4, 'Problema 4', 'Erro layout.', 2, '2018-11-23 22:54:41', '2018-11-23 22:54:41'),
 (6, 'Problema na maquina', 'Minha maquina n&atilde;o liga.', 5, '2018-11-23 23:40:09', '2018-11-23 23:40:09'),
-(7, 'teste', 'teste', 2, '2018-12-01 02:32:15', '2018-12-01 02:32:15');
+(7, 'teste', 'teste', 2, '2018-12-01 02:32:15', '2018-12-01 02:32:15'),
+(8, 'teste', 'teste', 21, '2018-12-03 19:45:06', '2018-12-03 19:45:06');
 
 -- --------------------------------------------------------
 
@@ -136,8 +136,8 @@ CREATE TABLE `eventos` (
 --
 
 INSERT INTO `eventos` (`id`, `title`, `body`, `image`, `created_at`, `updated_at`) VALUES
-(2, 'evento teste', 'masi um teste', 'evento/165748201811155beda58c0ceb7.png', '2018-11-15 18:57:48', '2018-11-15 18:57:48'),
-(3, 'Evento 1', 'No dia 03/11 ocorrerá um evento muito.', 'evento/170645201811155beda7a55dd57.jpeg', '2018-11-15 19:06:45', '2018-11-20 03:52:12');
+(2, 'evento teste', 'masi um teste', 'evento/162043201812035c0557dbcecae.jpeg', '2018-11-15 18:57:48', '2018-12-03 18:20:43'),
+(3, 'Evento 1', 'No dia 03/11 ocorrerá um evento muito.', 'evento/162100201812035c0557ec19066.jpeg', '2018-11-15 19:06:45', '2018-12-03 18:21:00');
 
 -- --------------------------------------------------------
 
@@ -240,7 +240,7 @@ INSERT INTO `permissions` (`id`, `name`, `label`, `created_at`, `updated_at`) VA
 (3, 'create_eventos', 'Gerenciar Eventos', NULL, NULL),
 (4, 'create_notice', 'Gerenciar Noticia', NULL, NULL),
 (5, 'create_cardapio', 'Gerenciar Cardápio', NULL, NULL),
-(6, 'create_suporte', 'Abrir Chamado ', NULL, NULL),
+(6, 'create_suporte', 'Abrir Chamado', NULL, NULL),
 (7, 'create_user', 'Gerenciar Usuários', NULL, NULL),
 (9, 'gen_chamado', 'Gerenciar Suporte', NULL, NULL),
 (10, 'adm_user', 'Gerenciar Usuários', NULL, NULL);
@@ -357,8 +357,8 @@ INSERT INTO `role_user` (`id`, `role_id`, `user_id`) VALUES
 (29, 2, 20),
 (30, 6, 20),
 (31, 1, 20),
-(32, 2, 21),
-(33, 3, 21);
+(37, 2, 21),
+(38, 3, 21);
 
 -- --------------------------------------------------------
 
@@ -385,14 +385,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `nomecompleto`, `email`, `email_verified_at`, `password`, `nascimento`, `foto`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'allan', 'Allan Ferreira', 'allan_f2008@hotmail.com', NULL, '$2y$10$NpQTJWleWaxo.FCPZorXDu6aWDc6/3cnEFwGTR.4IQVbDRzSVZouW', '1992-07-25', 'user/021835201812015c01ef7b0d17c.jpeg', 'XIi4k8jqNDzKd4Nh4m0H5ttvFuDnZv1XiLJ8FPOtNqAclrTCiut2DGH8sHHy', '2018-10-26 05:06:57', '2018-12-01 04:52:29'),
+(2, 'allan', 'Allan Ferreira', 'allan_f2008@hotmail.com', NULL, '$2y$10$NpQTJWleWaxo.FCPZorXDu6aWDc6/3cnEFwGTR.4IQVbDRzSVZouW', '1992-07-25', 'user/021835201812015c01ef7b0d17c.jpeg', 'JZY29ZqOjXjNfuQROp4llzw3YGEn8Q7lSPOe3oqCNz5FuOMuL0w2tmgpR5mN', '2018-10-26 05:06:57', '2018-12-01 04:52:29'),
 (3, 'maria', 'Maria Borges', 'maria8@hotmail.com', NULL, '$2y$10$NpQTJWleWaxo.FCPZorXDu6aWDc6/3cnEFwGTR.4IQVbDRzSVZouW', '1983-03-17', 'user/mari.jpg', 'eMjaT7ZfQByKKGom0f8qNzvEETyu9Isuqjo0zypN1WnrprYI6ruybk148z8e', '2018-10-26 05:06:57', '2018-12-01 04:55:54'),
-(4, 'pedro', 'Pedro Borba', 'pedro8@hotmail.com', NULL, '$2y$10$NpQTJWleWaxo.FCPZorXDu6aWDc6/3cnEFwGTR.4IQVbDRzSVZouW', '1983-01-13', 'user/pedro.jpg', 'VGptEJVwDuAD1VdLDhPS81Y5TcwIUaFde1LkZCQP3xCuRmDmuBy6aHrQtws4', '2018-10-26 05:06:57', '2018-10-26 05:06:57'),
+(4, 'pedro', 'Pedro Borba', 'pedro8@hotmail.com', NULL, '$2y$10$NpQTJWleWaxo.FCPZorXDu6aWDc6/3cnEFwGTR.4IQVbDRzSVZouW', '1983-01-13', 'user/pedro.jpg', 'z95S8F0mF6OKgkTT0lofxTPHAPj3jYPIz0iVqhWXY6ODutDGU5TcQz2fMI41', '2018-10-26 05:06:57', '2018-10-26 05:06:57'),
 (5, 'bruna', 'Bruna Silva', 'bruna@gmail.com', NULL, '$2y$10$NpQTJWleWaxo.FCPZorXDu6aWDc6/3cnEFwGTR.4IQVbDRzSVZouW', '1983-06-09', 'user/bruna.jpg', 'BwJv2XFMfmImz104W15uRak5UQg6Agba9BGbr8LOIxnZ5hHXqKd238Kjws5t', '2018-10-26 05:06:57', '2018-10-26 05:06:57'),
 (6, 'marcia', 'Marcia Costa', 'marcia@gmail.com', NULL, '$2y$10$NpQTJWleWaxo.FCPZorXDu6aWDc6/3cnEFwGTR.4IQVbDRzSVZouW', '1983-10-07', 'user/marcia.jpg', 'VlVZ73ujrWgMIGb4qXXvkLHotIuKdt96975pliKNhNIrE84xLYULzycG6KRn', '2018-10-26 05:06:57', '2018-10-26 05:06:57'),
-(19, 'admin', 'mais novo admin', 'admin@hotmail.co', NULL, '$2y$10$vqw6Q2o5FqH3UJbgUL59NunSRpVfNR/nT0gvrwVeRMtlRb5hZvjsO', '2018-12-20', 'user/192017201812025c04307187674.jpeg', '6QXASrytHy0OSMi9dDCDmyYZPnPF4Bzx9GAQ6JEaZaCuz3luCqJTjaahr0xP', '2018-12-02 20:52:19', '2018-12-02 21:20:17'),
-(20, 'dire', 'novo diretor', 'dire@hotmail.co', NULL, '$2y$10$NpQTJWleWaxo.FCPZorXDu6aWDc6/3cnEFwGTR.4IQVbDRzSVZouW', '2018-12-03', 'user/192003201812025c0430637f575.jpeg', 'bAGTCiH7LmscZvfJRoB7zwAm5RmkcX6snaKidY9eh4gDx3lJvKhgNXmo96bo', '2018-12-02 20:59:12', '2018-12-02 21:20:03'),
-(21, 'user', 'usuario padrao', 'user@hotmail.co', NULL, '$2y$10$K6KersLUL3L/TjKEkR7Uk.eJ/TOOqM92P.HiNG5slTvodulvX9c4.', '2018-12-11', 'user/191943201812025c04304fc31a8.jpeg', '5zucIUNgMKxrIVvqRz5lk7Rubs7x7x7hNdN3wWFIT9rHBzZHhP487xWAfoTE', '2018-12-02 21:13:12', '2018-12-02 21:19:43');
+(19, 'admin', 'administrador', 'admin@gmal.com', NULL, '$2y$10$vqw6Q2o5FqH3UJbgUL59NunSRpVfNR/nT0gvrwVeRMtlRb5hZvjsO', '2018-12-20', 'user/192017201812025c04307187674.jpeg', 'qArQHVod03Wcrysi8iJAxqHeV3CUF56hO95qDfIbfp3E6DAawKsmM4NcPVsK', '2018-12-02 20:52:19', '2018-12-03 20:11:04'),
+(20, 'dire', 'Diretor', 'dire@hotmail.co', NULL, '$2y$10$NpQTJWleWaxo.FCPZorXDu6aWDc6/3cnEFwGTR.4IQVbDRzSVZouW', '2018-12-03', 'user/192003201812025c0430637f575.jpeg', 'SyNGYliR54a38m7Nt2MiZogMeyWVD6eKvLOQYDLxpTrJ3U2KT0fEk10yCM3N', '2018-12-02 20:59:12', '2018-12-03 20:15:35'),
+(21, 'user', 'usuario padrao', 'user@hotmail.co', NULL, '$2y$10$K6KersLUL3L/TjKEkR7Uk.eJ/TOOqM92P.HiNG5slTvodulvX9c4.', '2018-12-11', 'user/191943201812025c04304fc31a8.jpeg', 'cwkI6qQ0JRFAEBgjhIZIoOmoAlx5d1V0UYlSbdLLaMBuKzbEWqpdt606DwAh', '2018-12-02 21:13:12', '2018-12-02 21:19:43');
 
 --
 -- Indexes for dumped tables
@@ -496,27 +496,27 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `arquivos`
 --
 ALTER TABLE `arquivos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `avisos`
 --
 ALTER TABLE `avisos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `cardapios`
 --
 ALTER TABLE `cardapios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `chamados`
 --
 ALTER TABLE `chamados`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `migrations`
 --
@@ -526,7 +526,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `password_resets`
 --
@@ -541,7 +541,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT for table `permission_role`
 --
 ALTER TABLE `permission_role`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT for table `respostas`
 --
@@ -556,12 +556,12 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `role_user`
 --
 ALTER TABLE `role_user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- Constraints for dumped tables
 --
