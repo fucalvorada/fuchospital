@@ -93,26 +93,20 @@
 			headers: {
 				'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
 			},
+			beforeSend: function(){
+				alert('Essa Ação não terá como ser desfeita!');
+			},
 			success: function(response) {
 
-				$('#mensagem').val(response.mensagem);
+				if(response == 1){
+					alert('Deletado com sucesso!');
+				}else{
+					alert('Não foi possível deletar!');
+				}
 
-				var id = $(this).attr("href");
-
-				var alturaTela = $(document).height();
-				var larguraTela = $(window).width();
-
-				$('#mascara').css({'width':larguraTela,'height':alturaTela});
-				$('#mascara').fadeIn(1000); 
-				$('#mascara').fadeTo("slow",0.8);
-
-				var left = ($(window).width() /2) - ( $(id).width() / 2 );
-				var top = ($(window).height() / 2) - ( $(id).height() / 2 );
-
-				$(id).css({'top':top,'left':left});
-				$(id).show(); 
-				$(".window3").show();
-
+			},
+			complete: function(){
+				window.location.reload();
 			}
 		});
 	}
@@ -121,12 +115,6 @@
 
 
 <div class="page_content_wrap" style="background:#fff;"  >
-
-
-	@if (Session::has('message'))
-	<div class="alert alert-info">{{ Session::get('message') }}</div>
-	@endif
-
 
 	@if ($errors->any())
 	<div class="alert alert-danger">
@@ -139,14 +127,20 @@
 	@endif
 
 	<section class="post_content" itemprop="articleBody">
+
+
 		<div class="sc_reviews alignright">
 			<!-- #TRX_REVIEWS_PLACEHOLDER# -->
 		</div>
 
 		@if (Session::has('message'))
-		<div class="alert alert-info">{{ Session::get('message') }}</div>
+		<div style="background:#fff; padding:10px; width:50%; border-radius:10px; margin-bottom:20px;">
+			<p style="color:red;">{{ Session::get('message') }}</p>
+		</div>
 		@endif
 		<div class="sc_section" style="background-color:#fff; border-radius: 4px; box-shadow: 1px 2px #e8eaec;">
+
+			@can('create_eventos')
 
 			<button type="button" style="margin: 10px;"  id="teste"><a href="{{ route('registrar')}}">Novo usuário</a></button>
 
@@ -205,6 +199,17 @@
 					</tbody>
 				</table>
 			</div>
+
+			@else
+
+			<div style="background:#fff; padding:10px; width:50%; border-radius:10px;">
+				<p style="color:red;">SEM PERMISSÃO!</p>
+
+			</div>
+
+			<script>window.location = "/home";</script>
+
+			@endcan
 		</div>
 	</section>
 </div>	

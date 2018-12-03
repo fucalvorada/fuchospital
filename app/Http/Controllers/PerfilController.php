@@ -78,14 +78,14 @@ class PerfilController extends Controller
 
 				User::delete_role($request->id_user);
 
-					if($request->cad_nivel == 1){
-						User::insert_adm($user);
+				if($request->cad_nivel == 1){
+					User::insert_adm($user);
 
-					}else if($request->cad_nivel == 2){
-						User::insert_dir($user);
-					}else{
-						User::insert_pad($user);
-					}
+				}else if($request->cad_nivel == 2){
+					User::insert_dir($user);
+				}else{
+					User::insert_pad($user);
+				}
 			}
 			return redirect()->back()->with('message', 'sucesso!'); 
 		}else{
@@ -182,8 +182,27 @@ class PerfilController extends Controller
 
 	public function confirm($id){
 
-		$mensagem = 'Tem certeza que deseja excluir?';
-		return response()->json($mensagem);
+		$idLog = Auth::User()->id;
+
+		if( $idLog != $id ){
+
+			$user = User::find($id);
+
+			User::delete_role($id);
+
+			if( $user->delete() ){
+				$result = 1;
+			}else{
+				$result = 0;
+			}
+
+			return response()->json($result);
+
+		}else{
+
+			$result = 3;
+			return response()->json($result);
+		}
 	}
 
 }

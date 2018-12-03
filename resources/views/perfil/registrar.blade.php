@@ -4,8 +4,16 @@
 
 <link rel="stylesheet" type="text/css" href="{{asset('css/painel_noticia.css')}}">
 
-
+@if (Session::has('message'))
+<div style="background:#fff; padding:10px; width:50%; border-radius:10px; margin-bottom:20px;">
+    <p style="color:red;">{{ Session::get('message') }}</p>
+</div>
+@endif
 <div class="modal-content" style="background:#fff;">
+
+
+    @can('create_eventos')
+
     <div class="modal-header">
         <h5 class="" id="">Cadastrar Usuário</h5>
     </div>
@@ -66,6 +74,17 @@
             </div>
         </form>
     </div>
+
+    @else
+
+    <div style="background:#fff; padding:10px; width:50%; border-radius:10px;">
+        <p style="color:red;">SEM PERMISSÃO!</p>
+
+    </div>
+
+    <script>window.location = "/home";</script>
+
+    @endcan
 
 </div>
 

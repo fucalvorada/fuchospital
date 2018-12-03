@@ -104,6 +104,13 @@ class EventosController extends Controller
 		$eventos->title = $request->title_notice;
 		$eventos->body 	= $request->editor_noticia;
 
+		
+		if(null != $request->image_notice && !empty($request->image_notice)){
+
+			//faz upload na pasta storage/public/noticia
+			$eventos->image  = $this->upload($request);
+		}
+
 		if( $eventos->save() ){
 			return redirect()->back()->with('message', 'Editado com sucesso!'); 
 		}else{

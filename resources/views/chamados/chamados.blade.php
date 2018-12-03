@@ -150,6 +150,8 @@
 
 	<div id="bbpress-forums">
 
+		@can('create_eventos')
+
 		@if (Session::has('message'))
 		<div class="alert alert-info">{{ Session::get('message') }}</div>
 		@endif
@@ -224,6 +226,17 @@
 			</li>
 
 		</ul>
+
+		@else
+
+		<div style="background:#fff; padding:10px; width:50%; border-radius:10px;">
+			<p style="color:red;">SEM PERMISSÃO!</p>
+
+		</div>
+
+		<script>window.location = "/home";</script>
+
+		@endcan
 
 	</div>
 </section>

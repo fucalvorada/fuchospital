@@ -35,11 +35,11 @@
 			success: function(response) {
 
 				
-				$('#edit_nome').val(response.nomecompleto);
-				$('#edit_email').val(response.email);
-				$('#edit_user').val(response.name);
-				$('#id_user').val(response.id);
-				$('#edit_aniver').val(response.nascimento);
+				$('#edit_nome').val(response.user.nomecompleto);
+				$('#edit_email').val(response.user.email);
+				$('#edit_user').val(response.user.name);
+				$('#id_user').val(response.user.id);
+				$('#edit_aniver').val(response.user.nascimento);
 
 				var id = $(this).attr("href");
 
@@ -62,18 +62,18 @@
 
 </script>
 
+	@if (Session::has('message'))
+	<div style="background:#fff; padding:10px; width:50%; border-radius:10px; margin-bottom:20px;">
+		<p style="color:red;">{{ Session::get('message') }}</p>
+	</div>
+	@endif
+
 
 <div class="page_content_wrap" style="background:#fff;"  >
 
-		@can('adm_user')
-		<button type="button" style="margin-bottom: 30px;margin-right: 10px; float:right;"><a style="color:#fff;" href="{{ route('adm_user') }}">Administrar Usuários</a></button>
-		@endcan
-
-
-	@if (Session::has('message'))
-	<div class="alert alert-info">{{ Session::get('message') }}</div>
-	@endif
-
+	@can('adm_user')
+	<button type="button" style="margin-bottom: 30px;margin-right: 10px; float:right;"><a style="color:#fff;" href="{{ route('adm_user') }}">Administrar Usuários</a></button>
+	@endcan
 
 	@if ($errors->any())
 	<div class="alert alert-danger">

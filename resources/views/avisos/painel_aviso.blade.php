@@ -84,6 +84,9 @@
 			headers: {
 				'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
 			},
+			beforeSend: function(){
+				alert('Essa Ação não terá como ser desfeita!');
+			},
 			success: function(response) {
 
 				if(response == 1){
@@ -92,6 +95,9 @@
 					alert('Não foi possível deletar!');
 				}
 
+			},
+			complete: function(){
+				window.location.reload();
 			}
 		});
 
@@ -149,9 +155,13 @@
 	</div>
 
 	@if (Session::has('message'))
-	<div class="alert alert-info">{{ Session::get('message') }}</div>
+	<div style="background:#fff; padding:10px; width:50%; border-radius:10px; margin-bottom:20px;">
+		<p style="color:red;">{{ Session::get('message') }}</p>
+	</div>
 	@endif
 	<div class="sc_section" style="background-color:#fff; border-radius: 4px; box-shadow: 1px 2px #e8eaec;">
+
+		@can('create_eventos')
 
 		<button type="button" style="margin: 10px;"  id="teste">Cadastrar</button>
 
@@ -210,6 +220,17 @@
 				</tbody>
 			</table>
 		</div>
+
+		@else
+
+		<div style="background:#fff; padding:10px; width:50%; border-radius:10px;">
+			<p style="color:red;">SEM PERMISSÃO!</p>
+
+		</div>
+
+		<script>window.location = "/home";</script>
+
+		@endcan
 	</div>
 </section>
 
